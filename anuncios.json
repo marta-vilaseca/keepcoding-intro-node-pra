@@ -1,142 +1,142 @@
 [
   {
     "title": "Smartphone X",
-    "status": "venta",
+    "venta": true,
     "price": 499.99,
     "photo": "phone.jpg",
     "tags": ["mobile", "lifestyle"]
   },
   {
-    "title": "Gaming Laptop",
-    "status": "venta",
+    "title": "Laptop Gaming",
+    "venta": true,
     "price": 1299.99,
     "photo": "laptop.jpg",
     "tags": ["work", "lifestyle"]
   },
   {
-    "title": "Vintage Record Player",
-    "status": "venta",
+    "title": "Tocadiscos Vintage",
+    "venta": true,
     "price": 149.99,
     "photo": "record_player.jpg",
     "tags": ["lifestyle"]
   },
   {
-    "title": "Mountain Bike",
-    "status": "venta",
+    "title": "Bicicleta de Montaña",
+    "venta": true,
     "price": 599.99,
     "photo": "bike.jpg",
     "tags": ["motor", "lifestyle"]
   },
   {
-    "title": "Leather Office Chair",
-    "status": "venta",
+    "title": "Silla de Oficina de Cuero",
+    "venta": true,
     "price": 199.99,
     "photo": "chair.jpg",
     "tags": ["work", "lifestyle"]
   },
   {
-    "title": "Digital Camera",
-    "status": "venta",
+    "title": "Cámara Digital",
+    "venta": true,
     "price": 299.99,
     "photo": "camera.jpg",
     "tags": ["work", "lifestyle"]
   },
   {
-    "title": "Wanted: Retro Game Console",
-    "status": "busca",
+    "title": "SEGA Dreamcast",
+    "venta": false,
     "price": 150,
     "photo": "game_console.jpg",
     "tags": ["lifestyle"]
   },
   {
-    "title": "Office Desk",
-    "status": "venta",
+    "title": "Escritorio de Oficina",
+    "venta": true,
     "price": 79.99,
     "photo": "desk.jpg",
     "tags": ["work", "lifestyle"]
   },
   {
-    "title": "Luxury Watch",
-    "status": "venta",
-    "price": 899.99,
-    "photo": "watch.jpg",
+    "title": "Ordenador Vintage Amstrad",
+    "venta": true,
+    "price": 300,
+    "photo": "amstrad.jpg",
     "tags": ["lifestyle"]
   },
   {
-    "title": "Wanted: Electric Scooter",
-    "status": "busca",
+    "title": "Patinete Eléctrico",
+    "venta": false,
     "price": 300,
     "photo": "scooter.jpg",
     "tags": ["motor", "lifestyle"]
   },
   {
-    "title": "Smart Thermostat",
-    "status": "venta",
+    "title": "Termostato Inteligente",
+    "venta": true,
     "price": 89.99,
     "photo": "thermostat.jpg",
     "tags": ["work", "lifestyle"]
   },
   {
-    "title": "Classic Car",
-    "status": "venta",
+    "title": "Auto Clásico",
+    "venta": true,
     "price": 15000,
     "photo": "classic_car.jpg",
     "tags": ["motor", "lifestyle"]
   },
   {
-    "title": "Wanted: DSLR Camera",
-    "status": "busca",
+    "title": "Cámara DSLR",
+    "venta": false,
     "price": 500,
     "photo": "dslr_camera.jpg",
     "tags": ["work", "lifestyle"]
   },
   {
-    "title": "Fitness Tracker",
-    "status": "venta",
-    "price": 49.99,
+    "title": "Smartwatch",
+    "venta": true,
+    "price": 69.99,
     "photo": "fitness_tracker.jpg",
     "tags": ["lifestyle"]
   },
   {
-    "title": "Home Theater System",
-    "status": "venta",
-    "price": 799.99,
+    "title": "Sistema Dolby Surround",
+    "venta": false,
+    "price": 500,
     "photo": "home_theater.jpg",
     "tags": ["lifestyle"]
   },
   {
-    "title": "Wanted: Vintage Vinyl Records",
-    "status": "busca",
-    "price": 20,
+    "title": "Surtido Vinilos Vintage",
+    "venta": true,
+    "price": 200,
     "photo": "vinyl_records.jpg",
     "tags": ["lifestyle"]
   },
   {
-    "title": "Electric Guitar",
-    "status": "venta",
-    "price": 299.99,
+    "title": "Guitarra Eléctrica",
+    "venta": true,
+    "price": 300,
     "photo": "guitar.jpg",
     "tags": ["lifestyle"]
   },
   {
-    "title": "Digital Drawing Tablet",
-    "status": "venta",
+    "title": "Tableta de Dibujo Digital",
+    "venta": true,
     "price": 129.99,
     "photo": "drawing_tablet.jpg",
     "tags": ["work", "lifestyle"]
   },
   {
-    "title": "Wanted: High-End Blender",
-    "status": "busca",
-    "price": 100,
-    "photo": "blender.jpg",
+    "title": "Batidora - Amasadora",
+    "venta": false,
+    "price": 150,
+    "photo": "stand-mixer.jpg",
     "tags": ["lifestyle"]
   },
   {
-    "title": "Smart Doorbell",
-    "status": "venta",
+    "title": "Teclado mecánico compatible PC/Mac",
+    "venta": true,
     "price": 129.99,
-    "photo": "doorbell.jpg",
+    "photo": "keyboard.jpg",
     "tags": ["work", "lifestyle"]
   }
 ]
