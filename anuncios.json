@@ -2,141 +2,141 @@
   {
     "title": "Smartphone X",
     "venta": true,
-    "price": 499.99,
-    "photo": "phone.jpg",
+    "price": 500,
+    "photo": "01_phone.jpg",
     "tags": ["mobile", "lifestyle"]
   },
   {
     "title": "Laptop Gaming",
     "venta": true,
-    "price": 1299.99,
-    "photo": "laptop.jpg",
+    "price": 1300,
+    "photo": "02_laptop.jpg",
     "tags": ["work", "lifestyle"]
   },
   {
     "title": "Tocadiscos Vintage",
     "venta": true,
-    "price": 149.99,
-    "photo": "record_player.jpg",
+    "price": 150,
+    "photo": "03_recordplayer.jpg",
     "tags": ["lifestyle"]
   },
   {
     "title": "Bicicleta de Montaña",
     "venta": true,
-    "price": 599.99,
-    "photo": "bike.jpg",
+    "price": 550,
+    "photo": "04_mountainbike.jpg",
     "tags": ["motor", "lifestyle"]
   },
   {
     "title": "Silla de Oficina de Cuero",
     "venta": true,
-    "price": 199.99,
-    "photo": "chair.jpg",
+    "price": 225,
+    "photo": "05_chair.jpg",
     "tags": ["work", "lifestyle"]
   },
   {
     "title": "Cámara Digital",
     "venta": true,
-    "price": 299.99,
-    "photo": "camera.jpg",
+    "price": 300,
+    "photo": "06_digitalcamera.jpg",
     "tags": ["work", "lifestyle"]
   },
   {
-    "title": "SEGA Dreamcast",
+    "title": "Consola Nintendo NES",
     "venta": false,
-    "price": 150,
-    "photo": "game_console.jpg",
+    "price": 200,
+    "photo": "07_nintendo.jpg",
     "tags": ["lifestyle"]
   },
   {
     "title": "Escritorio de Oficina",
     "venta": true,
-    "price": 79.99,
-    "photo": "desk.jpg",
+    "price": 80,
+    "photo": "08_desk.jpg",
     "tags": ["work", "lifestyle"]
   },
   {
     "title": "Ordenador Vintage Amstrad",
     "venta": true,
     "price": 300,
-    "photo": "amstrad.jpg",
+    "photo": "09_amstrad.jpg",
     "tags": ["lifestyle"]
   },
   {
     "title": "Patinete Eléctrico",
     "venta": false,
     "price": 300,
-    "photo": "scooter.jpg",
+    "photo": "10_scooter.jpg",
     "tags": ["motor", "lifestyle"]
   },
   {
-    "title": "Termostato Inteligente",
+    "title": "Cafetera espresso",
     "venta": true,
-    "price": 89.99,
-    "photo": "thermostat.jpg",
+    "price": 350,
+    "photo": "11_espresso.jpg",
     "tags": ["work", "lifestyle"]
   },
   {
-    "title": "Auto Clásico",
+    "title": "Chevrolet Impala",
     "venta": true,
-    "price": 15000,
-    "photo": "classic_car.jpg",
+    "price": 25000,
+    "photo": "12_chevrolet.jpg",
     "tags": ["motor", "lifestyle"]
   },
   {
-    "title": "Cámara DSLR",
+    "title": "Cámara DSLR Canon EOS",
     "venta": false,
     "price": 500,
-    "photo": "dslr_camera.jpg",
+    "photo": "13_dslrcamera.jpg",
     "tags": ["work", "lifestyle"]
   },
   {
     "title": "Smartwatch",
     "venta": true,
     "price": 69.99,
-    "photo": "fitness_tracker.jpg",
-    "tags": ["lifestyle"]
+    "photo": "14_smartwatch.jpg",
+    "tags": ["mobile", "lifestyle"]
   },
   {
-    "title": "Sistema Dolby Surround",
+    "title": "Proyector",
     "venta": false,
-    "price": 500,
-    "photo": "home_theater.jpg",
+    "price": 450,
+    "photo": "15_projector.jpg",
     "tags": ["lifestyle"]
   },
   {
     "title": "Surtido Vinilos Vintage",
     "venta": true,
     "price": 200,
-    "photo": "vinyl_records.jpg",
+    "photo": "16_vynils.jpg",
     "tags": ["lifestyle"]
   },
   {
     "title": "Guitarra Eléctrica",
     "venta": true,
     "price": 300,
-    "photo": "guitar.jpg",
+    "photo": "17_guitar.jpg",
     "tags": ["lifestyle"]
   },
   {
     "title": "Tableta de Dibujo Digital",
     "venta": true,
-    "price": 129.99,
-    "photo": "drawing_tablet.jpg",
+    "price": 120,
+    "photo": "18_tablet.jpg",
     "tags": ["work", "lifestyle"]
   },
   {
     "title": "Batidora - Amasadora",
     "venta": false,
     "price": 150,
-    "photo": "stand-mixer.jpg",
+    "photo": "19_mixer.jpg",
     "tags": ["lifestyle"]
   },
   {
     "title": "Teclado mecánico compatible PC/Mac",
     "venta": true,
-    "price": 129.99,
-    "photo": "keyboard.jpg",
+    "price": 80,
+    "photo": "20_keyboard.jpg",
     "tags": ["work", "lifestyle"]
   }
 ]
