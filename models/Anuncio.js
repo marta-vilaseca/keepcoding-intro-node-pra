@@ -12,5 +12,5 @@ const anuncioSchema = mongoose.Schema({
 // crear el modelo de anuncio
 const Anuncio = mongoose.model("Anuncio", anuncioSchema);
 
-// (opcional) exportar el modulo
+// exportar el modulo
 module.exports = Anuncio;
