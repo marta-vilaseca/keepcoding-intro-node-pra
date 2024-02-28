@@ -2,10 +2,23 @@
 <html>
   <head>
     <title><%= title %></title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <link rel="stylesheet" href="/stylesheets/style.css" />
   </head>
   <body>
-    <h1><%= title %></h1>
-    <p>Welcome to <%= title %></p>
+    <h1>Lista de Anuncios</h1>
+
+    <% if (anuncios && anuncios.length > 0) { %>
+    <ul>
+      <% anuncios.forEach(anuncio => { %>
+      <li>
+        <h3><%= anuncio.venta ? "Se vende" : "Se busca" %> : <%= anuncio.nombre %>, <%= anuncio.precio %>€</h3>
+        <p class="tags"><strong>Tags:</strong> <%= anuncio.tags %></p>
+        <img src="<%= '/images/' + anuncio.foto %>" alt="Imagen de <%= anuncio.nombre %>" />
+      </li>
+      <% }); %>
+    </ul>
+    <% } else { %>
+    <p class="mensaje-error">No hay anuncios disponibles con los criterios especificados.</p>
+    <% } %>
   </body>
 </html>

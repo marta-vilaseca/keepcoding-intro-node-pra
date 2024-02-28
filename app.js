@@ -28,12 +28,12 @@ app.use(express.static(path.join(__dirname, "public")));
  * Rutas de la API
  */
 app.use("/api/anuncios/", require("./routes/api/anuncios"));
+app.use("/api/tags/", require("./routes/api/tags"));
 
 /**
  * Rutas del website
  */
-app.use("/", require("./routes/index"));
-app.use("/users", require("./routes/users"));
+app.use("/", require("./routes/api/anuncios"));
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
