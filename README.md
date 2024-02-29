@@ -8,11 +8,10 @@ Desarrollar el API que se ejecutará en el servidor de un servicio de venta de a
 
 ## Documentación App
 
-Para instalar e inicializar la app:
+Para inicializar:
 
-```
-npm install
-```
+- Instalar las dependencias con `npm install`
+- Cargar los anuncios por defecto con `node initDB.js`
 
 ### Ejemplos URL Api
 

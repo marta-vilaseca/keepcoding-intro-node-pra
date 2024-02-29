@@ -4,112 +4,112 @@
     "venta": true,
     "precio": 500,
     "foto": "01_phone.jpg",
-    "tags": ["mobile", "lifestyle"]
+    "tags": ["mobile", "lifestyle", "electronics"]
   },
   {
     "nombre": "Laptop Gaming",
     "venta": true,
     "precio": 1300,
     "foto": "02_laptop.jpg",
-    "tags": ["work", "lifestyle"]
+    "tags": ["work", "lifestyle", "electronics"]
   },
   {
     "nombre": "Tocadiscos Vintage",
     "venta": true,
     "precio": 150,
     "foto": "03_recordplayer.jpg",
-    "tags": ["lifestyle"]
+    "tags": ["lifestyle", "collectibles", "home"]
   },
   {
     "nombre": "Bicicleta de Montaña",
     "venta": true,
     "precio": 550,
     "foto": "04_mountainbike.jpg",
-    "tags": ["motor", "lifestyle"]
+    "tags": ["motor", "lifestyle", "outdoors"]
   },
   {
     "nombre": "Silla de Oficina de Cuero",
     "venta": true,
     "precio": 225,
     "foto": "05_chair.jpg",
-    "tags": ["work", "lifestyle"]
+    "tags": ["work", "lifestyle", "home"]
   },
   {
     "nombre": "Cámara Digital",
     "venta": true,
     "precio": 300,
     "foto": "06_digitalcamera.jpg",
-    "tags": ["work", "lifestyle"]
+    "tags": ["work", "lifestyle", "electronics"]
   },
   {
     "nombre": "Consola Nintendo NES",
     "venta": false,
     "precio": 200,
     "foto": "07_nintendo.jpg",
-    "tags": ["lifestyle"]
+    "tags": ["lifestyle", "electronics", "games"]
   },
   {
     "nombre": "Escritorio de Oficina",
     "venta": true,
     "precio": 80,
     "foto": "08_desk.jpg",
-    "tags": ["work", "lifestyle"]
+    "tags": ["work", "lifestyle", "home"]
   },
   {
     "nombre": "Ordenador Vintage Amstrad",
     "venta": true,
     "precio": 300,
     "foto": "09_amstrad.jpg",
-    "tags": ["lifestyle"]
+    "tags": ["lifestyle", "collectibles", "electronics", "games"]
   },
   {
     "nombre": "Patinete Eléctrico",
     "venta": false,
     "precio": 300,
     "foto": "10_scooter.jpg",
-    "tags": ["motor", "lifestyle"]
+    "tags": ["motor", "lifestyle", "outdoors"]
   },
   {
     "nombre": "Cafetera espresso",
     "venta": true,
     "precio": 350,
     "foto": "11_espresso.jpg",
-    "tags": ["work", "lifestyle"]
+    "tags": ["work", "lifestyle", "home"]
   },
   {
     "nombre": "Chevrolet Impala",
     "venta": true,
     "precio": 25000,
     "foto": "12_chevrolet.jpg",
-    "tags": ["motor", "lifestyle"]
+    "tags": ["motor", "lifestyle", "collectibles"]
   },
   {
     "nombre": "Cámara DSLR Canon EOS",
     "venta": false,
     "precio": 500,
     "foto": "13_dslrcamera.jpg",
-    "tags": ["work", "lifestyle"]
+    "tags": ["work", "lifestyle", "electronics"]
   },
   {
     "nombre": "Smartwatch",
     "venta": true,
-    "precio": 69.99,
+    "precio": 65,
     "foto": "14_smartwatch.jpg",
-    "tags": ["mobile", "lifestyle"]
+    "tags": ["mobile", "lifestyle", "electronics", "fashion"]
   },
   {
     "nombre": "Proyector",
     "venta": false,
     "precio": 450,
     "foto": "15_projector.jpg",
-    "tags": ["lifestyle"]
+    "tags": ["lifestyle", "electronics"]
   },
   {
     "nombre": "Vinilos Vintage (surtido)",
     "venta": true,
     "precio": 200,
     "foto": "16_vynils.jpg",
-    "tags": ["lifestyle"]
+    "tags": ["lifestyle", "collectibles", "home"]
   },
   {
     "nombre": "Guitarra Eléctrica",
@@ -119,24 +119,164 @@
     "tags": ["lifestyle"]
   },
   {
-    "nombre": "Tableta de Dibujo Digital",
+    "nombre": "Tableta de Dibujo",
     "venta": true,
     "precio": 120,
     "foto": "18_tablet.jpg",
-    "tags": ["work", "lifestyle"]
+    "tags": ["work", "lifestyle", "electronics"]
   },
   {
     "nombre": "Batidora - Amasadora",
     "venta": false,
     "precio": 150,
     "foto": "19_mixer.jpg",
-    "tags": ["lifestyle"]
+    "tags": ["lifestyle", "home"]
   },
   {
-    "nombre": "Teclado mecánico compatible PC/Mac",
+    "nombre": "Teclado mecánico",
     "venta": true,
     "precio": 80,
     "foto": "20_keyboard.jpg",
-    "tags": ["work", "lifestyle"]
+    "tags": ["work", "lifestyle", "electronics"]
+  },
+  {
+    "nombre": "Auriculares Inalámbricos",
+    "venta": true,
+    "precio": 80,
+    "foto": "21_auriculares-inalambricos.jpg",
+    "tags": ["electronics", "mobile", "lifestyle"]
+  },
+  {
+    "nombre": "Juego de Mesa Estratégico",
+    "venta": true,
+    "precio": 45,
+    "foto": "22_juego-estrategico.jpg",
+    "tags": ["games", "collectibles"]
+  },
+  {
+    "nombre": "Tienda de Campaña para 2 Personas",
+    "venta": true,
+    "precio": 120,
+    "foto": "23_tienda-campana.jpg",
+    "tags": ["outdoors", "lifestyle"]
+  },
+  {
+    "nombre": "Robot Aspiradora Inteligente",
+    "venta": false,
+    "precio": 150,
+    "foto": "24_roomba.jpg",
+    "tags": ["electronics", "home", "lifestyle"]
+  },
+  {
+    "nombre": "Figura de Coleccionista",
+    "venta": true,
+    "precio": 150,
+    "foto": "25_figura-coleccionista.jpg",
+    "tags": ["collectibles", "lifestyle"]
+  },
+  {
+    "nombre": "Zapatillas Deportivas",
+    "venta": true,
+    "precio": 100,
+    "foto": "26_zapatillas-deportivas.jpg",
+    "tags": ["fashion", "lifestyle"]
+  },
+  {
+    "nombre": "Bolso Elegante para Portátil",
+    "venta": true,
+    "precio": 50,
+    "foto": "27_bolso-portatil.jpg",
+    "tags": ["fashion", "work", "lifestyle"]
+  },
+  {
+    "nombre": "Mochila para Excursiones",
+    "venta": true,
+    "precio": 40,
+    "foto": "28_mochila-excursiones.jpg",
+    "tags": ["outdoors", "lifestyle"]
+  },
+  {
+    "nombre": "Teléfono vintage",
+    "venta": true,
+    "precio": 75,
+    "foto": "29_telefono-vintage.jpg",
+    "tags": ["home", "collectibles"]
+  },
+  {
+    "nombre": "Gafas de Sol de Diseño",
+    "venta": true,
+    "precio": 60,
+    "foto": "30_gafas-de-sol.jpg",
+    "tags": ["fashion", "lifestyle"]
+  },
+  {
+    "nombre": "Libro ed. coleccionista",
+    "venta": true,
+    "precio": 75,
+    "foto": "31_libro-edespecial.jpg",
+    "tags": ["collectibles", "lifestyle"]
+  },
+  {
+    "nombre": "Joyero Vintage",
+    "venta": true,
+    "precio": 40,
+    "foto": "32_joyero-vintage.jpg",
+    "tags": ["home", "collectibles"]
+  },
+  {
+    "nombre": "Cámara Instantánea",
+    "venta": false,
+    "precio": 80,
+    "foto": "33_camara-instant.jpg",
+    "tags": ["electronics", "lifestyle"]
+  },
+  {
+    "nombre": "Videojuego Ed. Especial",
+    "venta": true,
+    "precio": 70,
+    "foto": "34_videojuego-especial.jpg",
+    "tags": ["games", "lifestyle"]
+  },
+  {
+    "nombre": "Set de Cuchillos alta calidad",
+    "venta": true,
+    "precio": 220,
+    "foto": "35_cuchillos.jpg",
+    "tags": ["home", "lifestyle"]
+  },
+  {
+    "nombre": "Altavoz Bluetooth",
+    "venta": false,
+    "precio": 80,
+    "foto": "36_altavoz.jpg",
+    "tags": ["electronics", "lifestyle"]
+  },
+  {
+    "nombre": "Set de cuencos para ramen",
+    "venta": true,
+    "precio": 50,
+    "foto": "37_cuencos-ramen.jpg",
+    "tags": ["home", "lifestyle"]
+  },
+  {
+    "nombre": "Máquina escribir vintage",
+    "venta": true,
+    "precio": 80,
+    "foto": "38_maquina-escribir.jpg",
+    "tags": ["home", "lifestyle", "collectibles"]
+  },
+  {
+    "nombre": "Volkswagen beetle",
+    "venta": true,
+    "precio": 12700,
+    "foto": "39_beetle.jpg",
+    "tags": ["motor", "collectibles", "lifestyle"]
+  },
+  {
+    "nombre": "Moto Harley Davidson",
+    "venta": true,
+    "precio": 14800,
+    "foto": "40_harley.jpg",
+    "tags": ["motor", "lifestyle"]
   }
 ]

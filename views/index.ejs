@@ -2,23 +2,35 @@
 <html>
   <head>
     <title><%= title %></title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="/stylesheets/style.css" />
   </head>
   <body>
-    <h1>Lista de Anuncios</h1>
+    <header><h1>Nodepop</h1></header>
 
-    <% if (anuncios && anuncios.length > 0) { %>
-    <ul>
-      <% anuncios.forEach(anuncio => { %>
-      <li>
-        <h3><%= anuncio.venta ? "Se vende" : "Se busca" %> : <%= anuncio.nombre %>, <%= anuncio.precio %>€</h3>
-        <p class="tags"><strong>Tags:</strong> <%= anuncio.tags %></p>
-        <img src="<%= '/images/' + anuncio.foto %>" alt="Imagen de <%= anuncio.nombre %>" />
-      </li>
-      <% }); %>
-    </ul>
-    <% } else { %>
-    <p class="mensaje-error">No hay anuncios disponibles con los criterios especificados.</p>
-    <% } %>
+    <main>
+      <% if (anuncios && anuncios.length > 0) { %>
+      <section class="productos">
+        <% anuncios.forEach(anuncio => { %>
+        <article class="producto">
+          <span class="producto__precio"><%= anuncio.precio %>€</span>
+          <div class="producto__info">
+            <span class="categoria"><%= anuncio.venta ? "Se vende" : "Se busca" %></span>
+            <h3 title="<%= anuncio.nombre %>"><%= anuncio.nombre %></h3>
+          </div>
+          <div class="producto__foto"><img src="<%= '/images/' + anuncio.foto %>" alt="Imagen de <%= anuncio.nombre %>" /></div>
+          <ul class="tags">
+            <% anuncio.tags.forEach(tag => { %>
+            <li class="tag"><a href="?tags=<%= tag %>"><%= tag %></a></li>
+            <% }); %>
+          </ul>
+        </article>
+        <% }); %>
+      </section>
+      <% } else { %>
+      <p class="mensaje-error">No hay anuncios disponibles con los criterios especificados.</p>
+      <% } %>
+    </main>
   </body>
 </html>
