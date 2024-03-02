@@ -62,7 +62,6 @@ header {
 }
 
 h1 {
-  color: MediumAquamarine;
   font-family: "Manrope", sans-serif;
   font-optical-sizing: auto;
   font-weight: 700;
@@ -73,6 +72,17 @@ h1 {
   background: url("../images/icon.png") center left no-repeat;
   background-size: 5rem;
   padding-left: 7rem;
+}
+
+h1 a:link,
+h1 a:visited {
+  color: MediumAquamarine;
+  text-decoration: none;
+}
+
+h1 a:hover {
+  color: Teal;
+  text-decoration: none;
 }
 
 .productos {
@@ -150,22 +160,56 @@ h3 {
   background-color: #777;
 }
 
-p.mensaje-error {
+.individual {
+  display: block;
+  margin: 0 auto;
+}
+
+.producto__detalles {
+  display: grid;
+  grid-template-columns: 1fr;
+  margin-bottom: 1rem;
+  gap: 2rem;
+}
+
+.producto__descripcion {
+  display: flex;
+  flex-direction: column-reverse;
+  gap: 2rem;
+}
+
+.error {
+  max-width: 800px;
+  padding: 4rem 2rem;
+  margin: 0 auto;
+}
+
+.error h2 {
+  text-align: center;
+  font-weight: 700;
+  color: coral;
+  margin: 0 auto;
+  font-size: 4rem;
+  margin-bottom: 3rem;
+}
+.error h3 {
   text-align: center;
   font-weight: 600;
   color: coral;
   margin: 0 auto;
-  padding: 4rem;
 }
 
 @media screen and (min-width: 480px) {
-  h3 {
+  .productos h3 {
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
   }
   .productos {
     grid-template-columns: repeat(2, 1fr);
+  }
+  .individual {
+    max-width: 500px;
   }
 }
 
@@ -174,6 +218,16 @@ p.mensaje-error {
     grid-template-columns: repeat(3, 1fr);
     gap: 2.5rem;
   }
+  .producto__detalles {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .producto__descripcion {
+    flex-direction: column;
+    gap: 2rem;
+  }
+  .individual {
+    max-width: 700px;
+  }
 }
 
 @media (min-width: 1200px) {
@@ -181,5 +235,8 @@ p.mensaje-error {
     max-width: 1300px;
     margin: auto;
     grid-template-columns: repeat(4, 1fr);
+  }
+  .individual {
+    max-width: 1000px;
   }
 }

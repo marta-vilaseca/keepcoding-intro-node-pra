@@ -7,10 +7,11 @@
     <link rel="stylesheet" href="/stylesheets/style.css" />
   </head>
   <body>
-    <header><h1>Nodepop</h1></header>
+    <header>
+      <h1><a href="/">Nodepop</a></h1>
+    </header>
 
     <main>
-      <% if (anuncios && anuncios.length > 0) { %>
       <section class="productos">
         <% anuncios.forEach(anuncio => { %>
         <article class="producto">
@@ -28,9 +29,6 @@
         </article>
         <% }); %>
       </section>
-      <% } else { %>
-      <p class="mensaje-error">No hay anuncios disponibles con los criterios especificados.</p>
-      <% } %>
     </main>
   </body>
 </html>

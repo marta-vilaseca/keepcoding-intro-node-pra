@@ -1,128 +1,276 @@
 var express = require("express");
 var router = express.Router();
+const { query, param, body, validationResult } = require("express-validator");
 const Anuncio = require("../../models/Anuncio");
+
+const validTags = ["collectibles", "electronics", "fashion", "games", "home", "lifestyle", "mobile", "motor", "outdoors", "work"];
+const allowedFormats = ["jpg", "jpeg", "png", "gif", "webp"];
+const validSortOptions = ["nombre", "precio", "venta"];
 
 // GET /api/anuncios
 // Devuelve una lista de anuncios con opción de filtros, paginación, ordenación y selección de campos
-router.get("/", async function (req, res, next) {
-  try {
-    // parámetros para los filtros
-    const filterByTag = req.query.tags;
-    const filterByType = req.query.venta;
-    const precio = req.query.precio;
-    const namePattern = req.query.nombre;
+router.get(
+  "/",
+  [
+    query("venta").optional().isIn(["venta", "busqueda"]).withMessage("Para 'tipo' solo pueden especificarse las opciones 'venta' o 'busqueda'"),
+    query("precio")
+      .optional()
+      .matches(/^-?\d+(-\d+)?$|^\d+-?$/)
+      .withMessage("Formato de precio inválido, debe ser uno o dos números en formato m-n, n, -n o n-"),
+    query("skip").optional().isNumeric().withMessage("El parámetro 'skip' debe ser numérico"),
+    query("limit").optional().isNumeric().withMessage("El parámetro 'limit' debe ser numérico"),
+    query("sort")
+      .optional()
+      .isIn(validSortOptions)
+      .withMessage(`Solo se puede utilizar 'sort' con los siguientes valores: ${validSortOptions.join(", ")}`),
+    query("fields")
+      .optional()
+      .custom((value) => {
+        const validFields = ["_id", "nombre", "precio", "venta", "foto", "tags"];
+        const fieldsArray = value.split(" ");
 
-    // paginación
-    const skip = req.query.skip;
-    const limit = req.query.limit;
+        // Validar que todos los campos proporcionados sean válidos, considerando versiones positivas (incluir) o negativas (excluir)
+        const allValid = fieldsArray.every((field) => {
+          // Comprobar si el campo empieza por ¨'¨y si la parte restante es un campo válido
+          if (field.startsWith("-")) {
+            const positiveField = field.substring(1);
+            return validFields.includes(positiveField);
+          } else {
+            return validFields.includes(field);
+          }
+        });
 
-    // ordenación
-    const sort = req.query.sort;
+        if (!allValid) {
+          throw new Error('Fields debe ser una lista de campos válidos separados por espacios (con el prefijo "-" opcional para excluir)');
+        }
 
-    // selección de qué campos mostrar
-    const fields = req.query.fields;
+        return true;
+      }),
+  ],
+  async (req, res, next) => {
+    try {
+      validationResult(req).throw();
+      // parámetros para los filtros
+      const filterByTag = req.query.tags;
+      const filterByType = req.query.venta;
+      const precio = req.query.precio;
+      const namePattern = req.query.nombre;
 
-    const filter = {};
+      // paginación
+      const skip = req.query.skip;
+      const limit = req.query.limit;
 
-    // filtro por tag
-    if (filterByTag) {
-      filter.tags = filterByTag;
-    }
+      // ordenación
+      const sort = req.query.sort;
 
-    // filtro por tipo (venta/búsqueda)
-    if (filterByType === "venta") {
-      filter.venta = true;
-    } else if (filterByType === "busqueda") {
-      filter.venta = false;
-    }
+      // selección de qué campos mostrar
+      const fields = req.query.fields;
 
-    // filtro por (rango de) precio
-    if (precio) {
-      const precioRange = precio.split("-");
+      const filter = {};
 
-      if (precioRange.length === 2) {
-        const [min, max] = precioRange;
-        if (min) filter.precio = { ...filter.precio, $gte: parseFloat(min) };
-        if (max) filter.precio = { ...filter.precio, $lte: parseFloat(max) };
-      } else if (precioRange.length === 1) {
-        filter.precio = parseFloat(precio);
+      // filtro por tag
+      if (filterByTag) {
+        filter.tags = filterByTag;
       }
+
+      // filtro por tipo (venta/búsqueda)
+      if (filterByType === "venta") {
+        filter.venta = true;
+      } else if (filterByType === "busqueda") {
+        filter.venta = false;
+      }
+
+      // filtro por (rango de) precio
+      if (precio) {
+        const precioRange = precio.split("-");
+
+        if (precioRange.length === 2) {
+          const [min, max] = precioRange;
+          if (min) filter.precio = { ...filter.precio, $gte: parseFloat(min) };
+          if (max) filter.precio = { ...filter.precio, $lte: parseFloat(max) };
+        } else if (precioRange.length === 1) {
+          filter.precio = parseFloat(precio);
+        }
+      }
+
+      // filtro por nombre (resultados que empiecen por el patrón especificado)
+      if (namePattern) {
+        filter.nombre = new RegExp("^" + namePattern, "i");
+      }
+
+      const anuncios = await Anuncio.listar(filter, skip, limit, sort, fields);
+
+      // comprobar si la request es para la API o para el frontend
+      if (req.originalUrl.startsWith("/api")) {
+        // si es la API mandar JSON
+        res.json({ results: anuncios });
+      } else {
+        // si no renderizar los datos en la vista
+        res.render("index", { anuncios });
+      }
+    } catch (error) {
+      next(error);
     }
-
-    // filtro por nombre (resultados que empiecen por el patrón especificado)
-    if (namePattern) {
-      filter.nombre = new RegExp("^" + namePattern, "i");
-    }
-
-    const anuncios = await Anuncio.listar(filter, skip, limit, sort, fields);
-
-    res.render("index", { anuncios });
-
-    // res.json({ results: anuncios });
-  } catch (error) {
-    next(error);
   }
-});
+);
 
 // GET /api/anuncios/<_id>
-// Devuelve un anuncio concreto
-router.get("/:id", async (req, res, next) => {
-  try {
-    const id = req.params.id;
+// Devuelve un anuncio concreto en base a su id
+router.get(
+  "/:id",
+  [
+    param("id")
+      .trim()
+      .isMongoId()
+      .withMessage("El ID proporcionado no tiene un formato válido")
+      .custom(async (value) => {
+        const anuncio = await Anuncio.findById(value);
+        if (!anuncio) {
+          throw new Error("El ID proporcionado no existe");
+        }
+        return true;
+      }),
+  ],
+  async (req, res, next) => {
+    try {
+      validationResult(req).throw();
+      const id = req.params.id;
 
-    const anuncio = await Anuncio.findById(id);
+      const anuncio = await Anuncio.findById(id);
 
-    res.json({ result: anuncio });
-  } catch (error) {
-    next(error);
+      // comprobar si la request es para la API o para el frontend
+      if (req.originalUrl.startsWith("/api")) {
+        // si es la API mandar JSON
+        res.json({ results: anuncio });
+      } else {
+        // si no renderizar los datos en la vista
+        res.render("anuncio", { anuncio });
+      }
+    } catch (error) {
+      next(error);
+    }
   }
-});
+);
 
 // POST /api/anuncios (body)
 // Crea un anuncio
-router.post("/", async (req, res, next) => {
-  try {
-    const data = req.body;
+router.post(
+  "/",
+  [
+    body("nombre").isString().withMessage("Nombre must be a string").notEmpty().withMessage("Nombre cannot be empty"),
+    body("venta").isBoolean().withMessage("Tipo must be a boolean").notEmpty().withMessage("Tipo cannot be empty"),
+    body("precio").isNumeric().withMessage("Precio debe ser un valor numérico").notEmpty().withMessage("Precio cannot be empty"),
+    body("foto")
+      .optional()
+      .isString()
+      .custom((value) => {
+        // comprobar que la extensi'on incluida en el nombre de la foto sea uno de los formatos permitidos
+        if (!value || allowedFormats.some((format) => value.endsWith(`.${format}`))) {
+          return true;
+        }
 
-    // creamos una instancia del anuncio  en memoria
-    const anuncio = new Anuncio(data);
+        throw new Error(`Invalid image format. Allowed formats: ${allowedFormats.join(", ")}`);
+      }),
+    body("tags")
+      .notEmpty()
+      .custom((value) => {
+        // Si es un tag solo guardarlo igualmente como array
+        const tagsArray = Array.isArray(value) ? value : [value];
 
-    // y lo persistimos en la BD
-    const anuncioGuardado = await anuncio.save();
+        // Comprobar que todos los tags recibidos estén en la lista de tags válidos
+        const invalidTags = tagsArray.filter((tag) => !validTags.includes(tag));
+        if (invalidTags.length > 0) {
+          throw new Error(`Invalid tags: ${invalidTags.join(", ")}. Valid tags are: ${validTags.join(", ")}`);
+        }
 
-    res.json({ result: anuncioGuardado });
-  } catch (error) {
-    next(error);
+        return true;
+      }),
+  ],
+  async (req, res, next) => {
+    try {
+      validationResult(req).throw();
+      const data = req.body;
+
+      // creamos una instancia del anuncio  en memoria
+      const anuncio = new Anuncio(data);
+
+      // y lo persistimos en la BD
+      const anuncioGuardado = await anuncio.save();
+
+      res.json({ result: anuncioGuardado });
+    } catch (error) {
+      next(error);
+    }
   }
-});
+);
 
-// PUT /api/agentes/<_id> (body)
-// Actualiza un agente
-router.put("/:id", async (req, res, next) => {
-  try {
-    const id = req.params.id;
-    const data = req.body;
+// PATCH /api/nuncios/<_id> (body)
+// Actualiza un anuncio en base a su id
+router.patch(
+  "/:id",
+  [
+    param("id")
+      .trim()
+      .isMongoId()
+      .withMessage("El ID proporcionado no tiene un formato válido")
+      .custom(async (value) => {
+        const anuncio = await Anuncio.findById(value);
+        if (!anuncio) {
+          throw new Error("El ID proporcionado no existe");
+        }
+        return true;
+      }),
+  ],
+  async (req, res, next) => {
+    try {
+      validationResult(req).throw();
+      const id = req.params.id;
+      const data = req.body;
 
-    const anuncioActualizado = await Anuncio.findByIdAndUpdate(id, data, { new: true });
+      const anuncioActualizado = await Anuncio.findByIdAndUpdate(id, data, { new: true });
 
-    res.json({ result: anuncioActualizado });
-  } catch (error) {
-    next(error);
+      if (req.originalUrl.startsWith("/api")) {
+        // si es la API mandar JSON
+        res.json({ result: anuncioActualizado });
+      }
+    } catch (error) {
+      next(error);
+    }
   }
-});
+);
 
 // DELETE /api/anuncios/<_id>
-// Elimina un anuncio
-router.delete("/:id", async (req, res, next) => {
-  try {
-    const id = req.params.id;
+// Elimina un anuncio en base a su id
+router.delete(
+  "/:id",
+  [
+    param("id")
+      .trim()
+      .isMongoId()
+      .withMessage("El ID proporcionado no tiene un formato válido")
+      .custom(async (value) => {
+        const anuncio = await Anuncio.findById(value);
+        if (!anuncio) {
+          throw new Error("El ID proporcionado no existe");
+        }
+        return true;
+      }),
+  ],
+  async (req, res, next) => {
+    try {
+      validationResult(req).throw();
+      const id = req.params.id;
 
-    await Anuncio.deleteOne({ _id: id });
+      await Anuncio.deleteOne({ _id: id });
 
-    res.json();
-  } catch (error) {
-    next(error);
+      if (req.originalUrl.startsWith("/api")) {
+        // si es la API mandar JSON
+        res.json({ message: "Document successfully deleted." });
+      }
+    } catch (error) {
+      next(error);
+    }
   }
-});
+);
 
 module.exports = router;
