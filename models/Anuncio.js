@@ -47,12 +47,12 @@ anuncioSchema.pre("save", function (next) {
 });
 
 // método listar
-anuncioSchema.statics.listar = function (filtro, skip, limit, sort) {
+anuncioSchema.statics.listar = function (filtro, options) {
   const query = Anuncio.find(filtro);
 
-  query.skip(skip);
-  query.limit(limit);
-  query.sort(sort);
+  query.skip(options.skip);
+  query.limit(options.limit);
+  query.sort(options.sort);
 
   return query.exec();
 };

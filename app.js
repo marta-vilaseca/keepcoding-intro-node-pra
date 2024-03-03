@@ -34,8 +34,8 @@ app.use("/api/anuncios/", require("./routes/api/anuncios"));
 /**
  * Rutas del website
  */
-app.use("/tags/", require("./routes/api/tags"));
-app.use("/", require("./routes/api/anuncios"));
+app.use("/tags/", require("./routes/tags"));
+app.use("/", require("./routes/index"));
 
 // catch 404 and forward to error handler
 app.use((req, res, next) => {
