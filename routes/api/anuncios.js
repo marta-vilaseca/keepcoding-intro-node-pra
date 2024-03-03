@@ -1,8 +1,9 @@
-var express = require("express");
-var router = express.Router();
-const { query, param, body, validationResult } = require("express-validator");
+const express = require("express");
+const { validationResult } = require("express-validator");
 const Anuncio = require("../../models/Anuncio");
 const validation = require("../../lib/validation");
+
+const router = express.Router();
 
 // GET /api/anuncios
 // Devuelve una lista de anuncios con opción de filtros, paginación y ordenación
@@ -51,6 +52,7 @@ router.get("/", validation.queryValidators, async (req, res, next) => {
 
     // filtro por nombre (resultados que empiecen por el patrón especificado)
     if (namePattern) {
+      /* eslint-disable prefer-template */
       filter.nombre = new RegExp("^" + namePattern, "i");
     }
 
@@ -131,22 +133,7 @@ router.patch("/:id", validation.paramValidators, async (req, res, next) => {
 
 // DELETE /api/anuncios/<_id>
 // Elimina un anuncio en base a su id
-router.delete(
-  "/:id",
-  [
-    param("id")
-      .trim()
-      .isMongoId()
-      .withMessage("El ID proporcionado no tiene un formato válido")
-      .custom(async (value) => {
-        const anuncio = await Anuncio.findById(value);
-        if (!anuncio) {
-          throw new Error("El ID proporcionado no existe");
-        }
-        return true;
-      }),
-  ],
-  async (req, res, next) => {
+router.delete("/:id", validation.paramValidators, async (req, res, next) => {
     try {
       validationResult(req).throw();
       const id = req.params.id;
@@ -160,7 +147,6 @@ router.delete(
     } catch (error) {
       next(error);
     }
-  }
-);
+  });
 
 module.exports = router;

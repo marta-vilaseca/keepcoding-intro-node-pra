@@ -11,7 +11,9 @@ const data = JSON.parse(fs.readFileSync("./anuncios.json", "utf-8"));
 main().catch((err) => console.log("Se ha producido un error", err));
 
 async function main() {
-  await new Promise((resolve) => connection.once("open", resolve));
+  await new Promise((resolve) => {
+    connection.once("open", resolve);
+  });
   const borrar = await pregunta("Estas seguro de querer borrar el contenido de la base de datos? (no) ");
 
   // si el usuario no responde afirmativamente, parar la ejecución
@@ -36,7 +38,7 @@ async function initAds() {
 }
 
 function pregunta(texto) {
-  return new Promise((resolve, reject) => {
+  return new Promise((resolve) => {
     // conectar readline con la consola
     const ifc = readline.createInterface({
       input: process.stdin,

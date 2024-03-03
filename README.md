@@ -361,4 +361,4 @@ Además del desarrollo de la API, es necesario que el site tenga una página fro
 #### Extras valorados positivamente:
 
 - [x] Documentación
-- [ ] Validar nuestro código con ESLint
+- [x] Validar nuestro código con ESLint

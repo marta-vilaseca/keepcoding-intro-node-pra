@@ -1,3 +1,5 @@
+/* eslint-disable no-use-before-define */
+/* eslint-disable func-names */
 const mongoose = require("mongoose");
 
 const { validTags, allowedFormats } = require("../lib/variables");
@@ -10,7 +12,7 @@ const anuncioSchema = mongoose.Schema({
   foto: {
     type: String,
     validate: {
-      validator: function (value) {
+      validator(value) {
         // comprobar si el formato de archivo de la foto es uno de los permitidos
         return !value || allowedFormats.some((format) => value.endsWith(`.${format}`));
       },
@@ -22,7 +24,7 @@ const anuncioSchema = mongoose.Schema({
     required: true,
     index: true,
     validate: {
-      validator: function (tags) {
+      validator(tags) {
         // comprobar que sólo intenten introducirse los tags permitidos
         return tags.every((tag) => validTags.includes(tag));
       },
