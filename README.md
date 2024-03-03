@@ -81,7 +81,7 @@ http://localhost:3000/:id
 
 ➜ Ejemplo: `http://localhost:3000/65e07cd8a31092a089d1f0fd`
 > [!NOTE]  
-> Las ID de los anuncios podemos obtenerlas y para introducirlas manualmente en nuestra URL si interactuamos con la API y recibimos los datos de los anuncios en formato JSON. Sin embargo para facilitar las cosas, en el website para acceder a cada anuncio individual bastará con **clicar sobre su título o su foto**.
+> Las ID de los anuncios podemos obtenerlas (para poder introducirlas manualmente en nuestra URL) si interactuamos con la API y recibimos los datos de los anuncios en formato JSON. Sin embargo para facilitar las cosas, en el website para acceder a cada anuncio individual bastará con **clicar sobre su título o su foto**.
 
 :small_blue_diamond: Para ver el **listado de los distintos tags** que hay en la base de datos usaremos:
 
