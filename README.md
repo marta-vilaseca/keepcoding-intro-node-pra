@@ -28,7 +28,7 @@ git clone git@github.com:marta-vilaseca/keepcoding-intro-node-pra.git
 :open_file_folder: Cambiamos al directorio del repositorio e **instalamos las dependencias** necesarias:
 
 ```sh
-cd nodepop
+cd keepcoding-intro-node-pra
 npm install
 ```
 
@@ -80,6 +80,8 @@ http://localhost:3000/:id
 ```
 
 ➜ Ejemplo: `http://localhost:3000/65e07cd8a31092a089d1f0fd`
+> [!NOTE]  
+> Las ID de los anuncios podemos obtenerlas y para introducirlas manualmente en nuestra URL si interactuamos con la API y recibimos los datos de los anuncios en formato JSON. Sin embargo para facilitar las cosas, en el website para acceder a cada anuncio individual bastará con **clicar sobre su título o su foto**.
 
 :small_blue_diamond: Para ver el **listado de los distintos tags** que hay en la base de datos usaremos:
 
@@ -128,7 +130,7 @@ http://localhost:3000/?tags=:tag
 - `limit` para determinar cuantos elementos queremos ver de una vez (por página)  
   ➜ Ejemplo: `http://localhost:3000/?limit=5` nos mostrará solo 5 elementos de una vez (por página)
 
-:small\*blue_diamond: Para **ordenar** los resultados de acuerdo a un campo determinado. Podemos incluir **más de un campo** separándolos por espacios, o añadir un **'-'** como modificador para indicar orden descendiente.
+:small_blue_diamond: Para **ordenar** los resultados de acuerdo a un campo determinado. Podemos incluir **más de un campo** separándolos por espacios, o añadir un **'-'** como modificador para indicar orden descendiente.
 
 ➜ Ejemplo: `http://localhost:3000/?sort=-precio` ordenamos por precio DESC  
 ➜ Ejemplo: `http://localhost:3000/?sort=-precio%20nombre` ordenamos por precio DESC y luego nombre ASC

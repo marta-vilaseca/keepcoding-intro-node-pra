@@ -48,7 +48,7 @@ app.use((err, req, res, next) => {
   // errores de validación
   if (err.array) {
     const errInfo = err.array({})[0];
-    err.message = `NOT VALID - ${errInfo.type} '${errInfo.path}' in ${errInfo.location}: ${errInfo.msg}`;
+    err.message = `NOT VALID - ${errInfo.type} '${errInfo.path}' en ${errInfo.location}: ${errInfo.msg}`;
     err.status = 422;
   }
 

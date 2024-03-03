@@ -109,6 +109,7 @@ h1 a:hover {
 
 h3 {
   font-size: 1.9rem;
+  color: Teal;
 }
 
 .producto__info a:link,
@@ -186,6 +187,12 @@ h3 {
 .tag a:active {
   background-color: #777;
   cursor: pointer;
+}
+
+p.mensaje-no-hay {
+  text-align: center;
+  color: coral;
+  font-weight: 600;
 }
 
 /* PRODUCTOS - Página Individual
