@@ -9,7 +9,14 @@ router.get("/", async function (req, res, next) {
   try {
     const distinctTags = await Anuncio.distinct("tags");
 
-    res.json({ tags: distinctTags });
+    // comprobar si la request es para la API o para el frontend
+    if (req.originalUrl.startsWith("/api")) {
+      // si es la API mandar JSON
+      res.json({ tags: distinctTags });
+    } else {
+      // si no renderizar los datos en la vista
+      res.render("tags", { distinctTags });
+    }
   } catch (error) {
     next(error);
   }

@@ -100,7 +100,17 @@ h1 a:hover {
 
 h3 {
   font-size: 1.9rem;
+}
+
+.producto__info a:link,
+.producto__info a:visited {
+  text-decoration: none;
   color: Teal;
+}
+
+.producto__info a:hover,
+.producto__info a:active {
+  color: MediumAquamarine;
 }
 
 .categoria {
@@ -136,6 +146,12 @@ h3 {
   object-fit: cover;
   object-position: 50% 50%;
   border-radius: 1.5rem;
+  transition: all 0.2s ease-in-out;
+}
+
+.producto__foto a:hover img,
+.producto__foto a:active img {
+  transform: scale(1.03);
 }
 
 .tags {
@@ -145,7 +161,8 @@ h3 {
   flex-wrap: wrap;
 }
 
-.tag a {
+.tag a:link,
+.tag a:visited {
   font-size: 1.3rem;
   line-height: 2rem;
   background-color: #bbb;
@@ -156,8 +173,10 @@ h3 {
   text-decoration: none;
 }
 
-.tag a:hover {
+.tag a:hover,
+.tag a:active {
   background-color: #777;
+  cursor: pointer;
 }
 
 .individual {
@@ -199,6 +218,38 @@ h3 {
   margin: 0 auto;
 }
 
+.tag-list {
+  list-style-type: none;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  text-align: center;
+  gap: 1rem;
+  padding: 0 2rem;
+}
+
+.tag-list a:link,
+.tag-list a:visited {
+  display: block;
+  font-size: 2rem;
+  line-height: 2.4rem;
+  border: 3px solid MediumAquamarine;
+  color: MediumAquamarine;
+  padding: 0.5rem 0.8rem;
+  border-radius: 0.5rem;
+  background-color: white;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.tag-list a:hover,
+.tag-list a:active {
+  background-color: MediumAquamarine;
+  color: white;
+  cursor: pointer;
+}
+
 @media screen and (min-width: 480px) {
   .productos h3 {
     white-space: nowrap;
@@ -227,6 +278,9 @@ h3 {
   }
   .individual {
     max-width: 700px;
+  }
+  .tag-list {
+    max-width: 500px;
   }
 }
 

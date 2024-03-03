@@ -8,51 +8,50 @@ const allowedFormats = ["jpg", "jpeg", "png", "gif", "webp"];
 const validSortOptions = ["nombre", "precio", "venta"];
 
 // GET /api/anuncios
-// Devuelve una lista de anuncios con opción de filtros, paginación, ordenación y selección de campos
+// Devuelve una lista de anuncios con opción de filtros, paginación y ordenación
 router.get(
   "/",
   [
-    query("venta").optional().isIn(["venta", "busqueda"]).withMessage("Para 'tipo' solo pueden especificarse las opciones 'venta' o 'busqueda'"),
+    query("tipo").optional().isIn(["venta", "busqueda"]).withMessage("Para 'tipo' solo pueden especificarse las opciones 'venta' o 'busqueda'"),
     query("precio")
       .optional()
       .matches(/^-?\d+(-\d+)?$|^\d+-?$/)
       .withMessage("Formato de precio inválido, debe ser uno o dos números en formato m-n, n, -n o n-"),
-    query("skip").optional().isNumeric().withMessage("El parámetro 'skip' debe ser numérico"),
-    query("limit").optional().isNumeric().withMessage("El parámetro 'limit' debe ser numérico"),
-    query("sort")
-      .optional()
-      .isIn(validSortOptions)
-      .withMessage(`Solo se puede utilizar 'sort' con los siguientes valores: ${validSortOptions.join(", ")}`),
-    query("fields")
+    query("tags")
       .optional()
       .custom((value) => {
-        const validFields = ["_id", "nombre", "precio", "venta", "foto", "tags"];
-        const fieldsArray = value.split(" ");
+        // Si es un tag solo guardarlo igualmente como array
+        const tagsArray = Array.isArray(value) ? value : [value];
 
-        // Validar que todos los campos proporcionados sean válidos, considerando versiones positivas (incluir) o negativas (excluir)
-        const allValid = fieldsArray.every((field) => {
-          // Comprobar si el campo empieza por ¨'¨y si la parte restante es un campo válido
-          if (field.startsWith("-")) {
-            const positiveField = field.substring(1);
-            return validFields.includes(positiveField);
-          } else {
-            return validFields.includes(field);
-          }
-        });
-
-        if (!allValid) {
-          throw new Error('Fields debe ser una lista de campos válidos separados por espacios (con el prefijo "-" opcional para excluir)');
+        // Comprobar que todos los tags recibidos estén en la lista de tags válidos
+        const invalidTags = tagsArray.filter((tag) => !validTags.includes(tag));
+        if (invalidTags.length > 0) {
+          throw new Error(`Invalid tags: ${invalidTags.join(", ")}. Valid tags are: ${validTags.join(", ")}`);
         }
 
         return true;
       }),
+    query("skip").optional().isNumeric().withMessage("El parámetro 'skip' debe ser numérico"),
+    query("limit").optional().isNumeric().withMessage("El parámetro 'limit' debe ser numérico"),
+    query("sort")
+      .optional()
+      .custom((value) => {
+        const options = value.split(/\s+/);
+        return options.every((option) => {
+          const cleanOption = option.startsWith("-") ? option.substring(1) : option;
+          return validSortOptions.includes(cleanOption);
+        });
+      })
+      .withMessage(
+        `Solo se puede utilizar 'sort' con los siguientes valores: ${validSortOptions.join(", ")} o con un '-' delante para indicar orden descendente (separados por espacios para múltiples valores)`
+      ),
   ],
   async (req, res, next) => {
     try {
       validationResult(req).throw();
       // parámetros para los filtros
       const filterByTag = req.query.tags;
-      const filterByType = req.query.venta;
+      const filterByType = req.query.tipo;
       const precio = req.query.precio;
       const namePattern = req.query.nombre;
 
@@ -62,9 +61,6 @@ router.get(
 
       // ordenación
       const sort = req.query.sort;
-
-      // selección de qué campos mostrar
-      const fields = req.query.fields;
 
       const filter = {};
 
@@ -98,7 +94,7 @@ router.get(
         filter.nombre = new RegExp("^" + namePattern, "i");
       }
 
-      const anuncios = await Anuncio.listar(filter, skip, limit, sort, fields);
+      const anuncios = await Anuncio.listar(filter, skip, limit, sort);
 
       // comprobar si la request es para la API o para el frontend
       if (req.originalUrl.startsWith("/api")) {
@@ -158,8 +154,9 @@ router.post(
   "/",
   [
     body("nombre").isString().withMessage("Nombre must be a string").notEmpty().withMessage("Nombre cannot be empty"),
-    body("venta").isBoolean().withMessage("Tipo must be a boolean").notEmpty().withMessage("Tipo cannot be empty"),
+    body("tipo").isBoolean().withMessage("Tipo must be a boolean").notEmpty().withMessage("Tipo cannot be empty"),
     body("precio").isNumeric().withMessage("Precio debe ser un valor numérico").notEmpty().withMessage("Precio cannot be empty"),
+    body("descripcion").optional().isString().withMessage("Descripcion must be a string"),
     body("foto")
       .optional()
       .isString()

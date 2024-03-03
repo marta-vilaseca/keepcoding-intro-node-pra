@@ -22,11 +22,7 @@
           <div class="producto__detalles">
             <div class="producto__foto"><img src="<%= '/images/' + anuncio.foto %>" alt="Imagen de <%= anuncio.nombre %>" /></div>
             <div class="producto__descripcion">
-              <div class="texto">
-                Vestibulum sed ullamcorper risus. Proin condimentum erat erat, vitae convallis mi vehicula id. Suspendisse sed ultricies metus. Quisque augue nisi, condimentum at sagittis et, dapibus
-                vel dui. Morbi at ante nisl. Nulla sit amet mi metus. Nulla auctor sagittis porttitor. Praesent pellentesque risus est, eget bibendum erat ultricies at. Suspendisse potenti. Nullam eu
-                nisl vel mauris hendrerit elementum ac vel enim. Praesent rhoncus bibendum lectus ac aliquet.
-              </div>
+              <div class="texto"><%= anuncio.descripcion %></div>
               <ul class="tags">
                 <% anuncio.tags.forEach(tag => { %>
                 <li class="tag"><a href="/?tags=<%= tag %>"><%= tag %></a></li>

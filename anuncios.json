@@ -1,282 +1,322 @@
 [
   {
     "nombre": "Smartphone X",
-    "venta": true,
+    "tipo": true,
     "precio": 500,
     "foto": "01_phone.jpg",
-    "tags": ["mobile", "lifestyle", "electronics"]
+    "tags": ["mobile", "lifestyle", "electronics"],
+    "descripcion": "Duis nec nunc non velit ultricies auctor. Maecenas auctor, justo nec malesuada efficitur, nisi urna bibendum ipsum, non cursus metus arcu vel arcu. Vivamus condimentum congue massa a facilisis. Sed vel sodales odio, in bibendum nisl. Nunc feugiat, risus vitae bibendum sagittis, lacus justo mattis purus, nec ullamcorper elit ligula vel nisl. Nam ullamcorper felis vel justo cursus, eu laoreet augue scelerisque."
   },
   {
     "nombre": "Laptop Gaming",
-    "venta": true,
+    "tipo": true,
     "precio": 1300,
     "foto": "02_laptop.jpg",
-    "tags": ["work", "lifestyle", "electronics"]
+    "tags": ["work", "lifestyle", "electronics"],
+    "descripcion": "Cras ullamcorper euismod justo, vel feugiat ligula tincidunt eu. Ut hendrerit augue eu nisi vulputate, a ultricies nunc fermentum. Integer ac risus eu urna sagittis feugiat. Sed vitae elit nec sapien luctus imperdiet. Mauris at erat vel ex interdum congue. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Ut ut libero vel libero cursus tincidunt. Suspendisse et eleifend arcu."
   },
   {
     "nombre": "Tocadiscos Vintage",
-    "venta": true,
+    "tipo": true,
     "precio": 150,
     "foto": "03_recordplayer.jpg",
-    "tags": ["lifestyle", "collectibles", "home"]
+    "tags": ["lifestyle", "collectibles", "home"],
+    "descripcion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, libero ac scelerisque facilisis, purus velit facilisis dolor, id gravida quam lectus eu eros. Sed vehicula, odio ac volutpat tristique, nisl ex vestibulum velit, nec posuere dolor metus nec mauris. Fusce efficitur sem non lacus varius, ac dapibus neque tincidunt. Ut eget risus vel velit imperdiet ullamcorper in vel nulla. In hac habitasse platea dictumst."
   },
   {
     "nombre": "Bicicleta de Montaña",
-    "venta": true,
+    "tipo": true,
     "precio": 550,
     "foto": "04_mountainbike.jpg",
-    "tags": ["motor", "lifestyle", "outdoors"]
+    "tags": ["motor", "lifestyle", "outdoors"],
+    "descripcion": "Phasellus vestibulum justo non purus posuere, vel commodo libero volutpat. Integer tincidunt libero vitae diam ullamcorper, ut luctus dui tincidunt. Fusce tristique lectus nec risus efficitur, sit amet lacinia elit luctus. Suspendisse vel sapien eu urna tempor iaculis. Maecenas aliquam, urna ut efficitur lobortis, elit lacus elementum orci, a bibendum odio nulla id mauris. Sed eu nunc ut dolor fermentum fermentum nec eu nisl."
   },
   {
     "nombre": "Silla de Oficina de Cuero",
-    "venta": true,
+    "tipo": true,
     "precio": 225,
     "foto": "05_chair.jpg",
-    "tags": ["work", "lifestyle", "home"]
+    "tags": ["work", "lifestyle", "home"],
+    "descripcion": "Duis nec nunc non velit ultricies auctor. Maecenas auctor, justo nec malesuada efficitur, nisi urna bibendum ipsum, non cursus metus arcu vel arcu. Vivamus condimentum congue massa a facilisis. Sed vel sodales odio, in bibendum nisl. Nunc feugiat, risus vitae bibendum sagittis, lacus justo mattis purus, nec ullamcorper elit ligula vel nisl. Nam ullamcorper felis vel justo cursus, eu laoreet augue scelerisque."
   },
   {
     "nombre": "Cámara Digital",
-    "venta": true,
+    "tipo": true,
     "precio": 300,
     "foto": "06_digitalcamera.jpg",
-    "tags": ["work", "lifestyle", "electronics"]
+    "tags": ["work", "lifestyle", "electronics"],
+    "descripcion": "Vestibulum sed ullamcorper risus. Proin condimentum erat erat, vitae convallis mi vehicula id. Suspendisse sed ultricies metus. Quisque augue nisi, condimentum at sagittis et, dapibus vel dui. Morbi at ante nisl. Nulla sit amet mi metus. Nulla auctor sagittis porttitor. Praesent pellentesque risus est, eget bibendum erat ultricies at. Suspendisse potenti. Nullam eu nisl vel mauris hendrerit elementum ac vel enim. Praesent rhoncus bibendum lectus ac aliquet."
   },
   {
     "nombre": "Consola Nintendo NES",
-    "venta": false,
+    "tipo": false,
     "precio": 200,
     "foto": "07_nintendo.jpg",
-    "tags": ["lifestyle", "electronics", "games"]
+    "tags": ["lifestyle", "electronics", "games"],
+    "descripcion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, libero ac scelerisque facilisis, purus velit facilisis dolor, id gravida quam lectus eu eros. Sed vehicula, odio ac volutpat tristique, nisl ex vestibulum velit, nec posuere dolor metus nec mauris. Fusce efficitur sem non lacus varius, ac dapibus neque tincidunt. Ut eget risus vel velit imperdiet ullamcorper in vel nulla. In hac habitasse platea dictumst."
   },
   {
     "nombre": "Escritorio de Oficina",
-    "venta": true,
+    "tipo": true,
     "precio": 80,
     "foto": "08_desk.jpg",
-    "tags": ["work", "lifestyle", "home"]
+    "tags": ["work", "lifestyle", "home"],
+    "descripcion": "Cras ullamcorper euismod justo, vel feugiat ligula tincidunt eu. Ut hendrerit augue eu nisi vulputate, a ultricies nunc fermentum. Integer ac risus eu urna sagittis feugiat. Sed vitae elit nec sapien luctus imperdiet. Mauris at erat vel ex interdum congue. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Ut ut libero vel libero cursus tincidunt. Suspendisse et eleifend arcu."
   },
   {
     "nombre": "Ordenador Vintage Amstrad",
-    "venta": true,
+    "tipo": true,
     "precio": 300,
     "foto": "09_amstrad.jpg",
-    "tags": ["lifestyle", "collectibles", "electronics", "games"]
+    "tags": ["lifestyle", "collectibles", "electronics", "games"],
+    "descripcion": "Vestibulum sed ullamcorper risus. Proin condimentum erat erat, vitae convallis mi vehicula id. Suspendisse sed ultricies metus. Quisque augue nisi, condimentum at sagittis et, dapibus vel dui. Morbi at ante nisl. Nulla sit amet mi metus. Nulla auctor sagittis porttitor. Praesent pellentesque risus est, eget bibendum erat ultricies at. Suspendisse potenti. Nullam eu nisl vel mauris hendrerit elementum ac vel enim. Praesent rhoncus bibendum lectus ac aliquet."
   },
   {
     "nombre": "Patinete Eléctrico",
-    "venta": false,
+    "tipo": false,
     "precio": 300,
     "foto": "10_scooter.jpg",
-    "tags": ["motor", "lifestyle", "outdoors"]
+    "tags": ["motor", "lifestyle", "outdoors"],
+    "descripcion": "Duis nec nunc non velit ultricies auctor. Maecenas auctor, justo nec malesuada efficitur, nisi urna bibendum ipsum, non cursus metus arcu vel arcu. Vivamus condimentum congue massa a facilisis. Sed vel sodales odio, in bibendum nisl. Nunc feugiat, risus vitae bibendum sagittis, lacus justo mattis purus, nec ullamcorper elit ligula vel nisl. Nam ullamcorper felis vel justo cursus, eu laoreet augue scelerisque."
   },
   {
     "nombre": "Cafetera espresso",
-    "venta": true,
+    "tipo": true,
     "precio": 350,
     "foto": "11_espresso.jpg",
-    "tags": ["work", "lifestyle", "home"]
+    "tags": ["work", "lifestyle", "home"],
+    "descripcion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, libero ac scelerisque facilisis, purus velit facilisis dolor, id gravida quam lectus eu eros. Sed vehicula, odio ac volutpat tristique, nisl ex vestibulum velit, nec posuere dolor metus nec mauris. Fusce efficitur sem non lacus varius, ac dapibus neque tincidunt. Ut eget risus vel velit imperdiet ullamcorper in vel nulla. In hac habitasse platea dictumst."
   },
   {
     "nombre": "Chevrolet Impala",
-    "venta": true,
+    "tipo": true,
     "precio": 25000,
     "foto": "12_chevrolet.jpg",
-    "tags": ["motor", "lifestyle", "collectibles"]
+    "tags": ["motor", "lifestyle", "collectibles"],
+    "descripcion": "Vestibulum sed ullamcorper risus. Proin condimentum erat erat, vitae convallis mi vehicula id. Suspendisse sed ultricies metus. Quisque augue nisi, condimentum at sagittis et, dapibus vel dui. Morbi at ante nisl. Nulla sit amet mi metus. Nulla auctor sagittis porttitor. Praesent pellentesque risus est, eget bibendum erat ultricies at. Suspendisse potenti. Nullam eu nisl vel mauris hendrerit elementum ac vel enim. Praesent rhoncus bibendum lectus ac aliquet."
   },
   {
     "nombre": "Cámara DSLR Canon EOS",
-    "venta": false,
+    "tipo": false,
     "precio": 500,
     "foto": "13_dslrcamera.jpg",
-    "tags": ["work", "lifestyle", "electronics"]
+    "tags": ["work", "lifestyle", "electronics"],
+    "descripcion": "Phasellus vestibulum justo non purus posuere, vel commodo libero volutpat. Integer tincidunt libero vitae diam ullamcorper, ut luctus dui tincidunt. Fusce tristique lectus nec risus efficitur, sit amet lacinia elit luctus. Suspendisse vel sapien eu urna tempor iaculis. Maecenas aliquam, urna ut efficitur lobortis, elit lacus elementum orci, a bibendum odio nulla id mauris. Sed eu nunc ut dolor fermentum fermentum nec eu nisl."
   },
   {
     "nombre": "Smartwatch",
-    "venta": true,
+    "tipo": true,
     "precio": 65,
     "foto": "14_smartwatch.jpg",
-    "tags": ["mobile", "lifestyle", "electronics", "fashion"]
+    "tags": ["mobile", "lifestyle", "electronics", "fashion"],
+    "descripcion": "Cras ullamcorper euismod justo, vel feugiat ligula tincidunt eu. Ut hendrerit augue eu nisi vulputate, a ultricies nunc fermentum. Integer ac risus eu urna sagittis feugiat. Sed vitae elit nec sapien luctus imperdiet. Mauris at erat vel ex interdum congue. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Ut ut libero vel libero cursus tincidunt. Suspendisse et eleifend arcu."
   },
   {
     "nombre": "Proyector",
-    "venta": false,
+    "tipo": false,
     "precio": 450,
     "foto": "15_projector.jpg",
-    "tags": ["lifestyle", "electronics"]
+    "tags": ["lifestyle", "electronics"],
+    "descripcion": "Duis nec nunc non velit ultricies auctor. Maecenas auctor, justo nec malesuada efficitur, nisi urna bibendum ipsum, non cursus metus arcu vel arcu. Vivamus condimentum congue massa a facilisis. Sed vel sodales odio, in bibendum nisl. Nunc feugiat, risus vitae bibendum sagittis, lacus justo mattis purus, nec ullamcorper elit ligula vel nisl. Nam ullamcorper felis vel justo cursus, eu laoreet augue scelerisque."
   },
   {
     "nombre": "Vinilos Vintage (surtido)",
-    "venta": true,
+    "tipo": true,
     "precio": 200,
     "foto": "16_vynils.jpg",
-    "tags": ["lifestyle", "collectibles", "home"]
+    "tags": ["lifestyle", "collectibles", "home"],
+    "descripcion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, libero ac scelerisque facilisis, purus velit facilisis dolor, id gravida quam lectus eu eros. Sed vehicula, odio ac volutpat tristique, nisl ex vestibulum velit, nec posuere dolor metus nec mauris. Fusce efficitur sem non lacus varius, ac dapibus neque tincidunt. Ut eget risus vel velit imperdiet ullamcorper in vel nulla. In hac habitasse platea dictumst."
   },
   {
     "nombre": "Guitarra Eléctrica",
-    "venta": true,
+    "tipo": true,
     "precio": 300,
     "foto": "17_guitar.jpg",
-    "tags": ["lifestyle"]
+    "tags": ["lifestyle"],
+    "descripcion": "Phasellus vestibulum justo non purus posuere, vel commodo libero volutpat. Integer tincidunt libero vitae diam ullamcorper, ut luctus dui tincidunt. Fusce tristique lectus nec risus efficitur, sit amet lacinia elit luctus. Suspendisse vel sapien eu urna tempor iaculis. Maecenas aliquam, urna ut efficitur lobortis, elit lacus elementum orci, a bibendum odio nulla id mauris. Sed eu nunc ut dolor fermentum fermentum nec eu nisl."
   },
   {
     "nombre": "Tableta de Dibujo",
-    "venta": true,
+    "tipo": true,
     "precio": 120,
     "foto": "18_tablet.jpg",
-    "tags": ["work", "lifestyle", "electronics"]
+    "tags": ["work", "lifestyle", "electronics"],
+    "descripcion": "Cras ullamcorper euismod justo, vel feugiat ligula tincidunt eu. Ut hendrerit augue eu nisi vulputate, a ultricies nunc fermentum. Integer ac risus eu urna sagittis feugiat. Sed vitae elit nec sapien luctus imperdiet. Mauris at erat vel ex interdum congue. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Ut ut libero vel libero cursus tincidunt. Suspendisse et eleifend arcu."
   },
   {
     "nombre": "Batidora - Amasadora",
-    "venta": false,
+    "tipo": false,
     "precio": 150,
     "foto": "19_mixer.jpg",
-    "tags": ["lifestyle", "home"]
+    "tags": ["lifestyle", "home"],
+    "descripcion": "Duis nec nunc non velit ultricies auctor. Maecenas auctor, justo nec malesuada efficitur, nisi urna bibendum ipsum, non cursus metus arcu vel arcu. Vivamus condimentum congue massa a facilisis. Sed vel sodales odio, in bibendum nisl. Nunc feugiat, risus vitae bibendum sagittis, lacus justo mattis purus, nec ullamcorper elit ligula vel nisl. Nam ullamcorper felis vel justo cursus, eu laoreet augue scelerisque."
   },
   {
     "nombre": "Teclado mecánico",
-    "venta": true,
+    "tipo": true,
     "precio": 80,
     "foto": "20_keyboard.jpg",
-    "tags": ["work", "lifestyle", "electronics"]
+    "tags": ["work", "lifestyle", "electronics"],
+    "descripcion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, libero ac scelerisque facilisis, purus velit facilisis dolor, id gravida quam lectus eu eros. Sed vehicula, odio ac volutpat tristique, nisl ex vestibulum velit, nec posuere dolor metus nec mauris. Fusce efficitur sem non lacus varius, ac dapibus neque tincidunt. Ut eget risus vel velit imperdiet ullamcorper in vel nulla. In hac habitasse platea dictumst."
   },
   {
     "nombre": "Auriculares Inalámbricos",
-    "venta": true,
+    "tipo": true,
     "precio": 80,
     "foto": "21_auriculares-inalambricos.jpg",
-    "tags": ["electronics", "mobile", "lifestyle"]
+    "tags": ["electronics", "mobile", "lifestyle"],
+    "descripcion": "Vestibulum sed ullamcorper risus. Proin condimentum erat erat, vitae convallis mi vehicula id. Suspendisse sed ultricies metus. Quisque augue nisi, condimentum at sagittis et, dapibus vel dui. Morbi at ante nisl. Nulla sit amet mi metus. Nulla auctor sagittis porttitor. Praesent pellentesque risus est, eget bibendum erat ultricies at. Suspendisse potenti. Nullam eu nisl vel mauris hendrerit elementum ac vel enim. Praesent rhoncus bibendum lectus ac aliquet."
   },
   {
     "nombre": "Juego de Mesa Estratégico",
-    "venta": true,
+    "tipo": true,
     "precio": 45,
     "foto": "22_juego-estrategico.jpg",
-    "tags": ["games", "collectibles"]
+    "tags": ["games", "collectibles"],
+    "descripcion": "Duis nec nunc non velit ultricies auctor. Maecenas auctor, justo nec malesuada efficitur, nisi urna bibendum ipsum, non cursus metus arcu vel arcu. Vivamus condimentum congue massa a facilisis. Sed vel sodales odio, in bibendum nisl. Nunc feugiat, risus vitae bibendum sagittis, lacus justo mattis purus, nec ullamcorper elit ligula vel nisl. Nam ullamcorper felis vel justo cursus, eu laoreet augue scelerisque."
   },
   {
     "nombre": "Tienda de Campaña para 2 Personas",
-    "venta": true,
+    "tipo": false,
     "precio": 120,
     "foto": "23_tienda-campana.jpg",
-    "tags": ["outdoors", "lifestyle"]
+    "tags": ["outdoors", "lifestyle"],
+    "descripcion": "Cras ullamcorper euismod justo, vel feugiat ligula tincidunt eu. Ut hendrerit augue eu nisi vulputate, a ultricies nunc fermentum. Integer ac risus eu urna sagittis feugiat. Sed vitae elit nec sapien luctus imperdiet. Mauris at erat vel ex interdum congue. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Ut ut libero vel libero cursus tincidunt. Suspendisse et eleifend arcu."
   },
   {
     "nombre": "Robot Aspiradora Inteligente",
-    "venta": false,
+    "tipo": false,
     "precio": 150,
     "foto": "24_roomba.jpg",
-    "tags": ["electronics", "home", "lifestyle"]
+    "tags": ["electronics", "home", "lifestyle"],
+    "descripcion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, libero ac scelerisque facilisis, purus velit facilisis dolor, id gravida quam lectus eu eros. Sed vehicula, odio ac volutpat tristique, nisl ex vestibulum velit, nec posuere dolor metus nec mauris. Fusce efficitur sem non lacus varius, ac dapibus neque tincidunt. Ut eget risus vel velit imperdiet ullamcorper in vel nulla. In hac habitasse platea dictumst."
   },
   {
     "nombre": "Figura de Coleccionista",
-    "venta": true,
+    "tipo": true,
     "precio": 150,
     "foto": "25_figura-coleccionista.jpg",
-    "tags": ["collectibles", "lifestyle"]
+    "tags": ["collectibles", "lifestyle"],
+    "descripcion": "Phasellus vestibulum justo non purus posuere, vel commodo libero volutpat. Integer tincidunt libero vitae diam ullamcorper, ut luctus dui tincidunt. Fusce tristique lectus nec risus efficitur, sit amet lacinia elit luctus. Suspendisse vel sapien eu urna tempor iaculis. Maecenas aliquam, urna ut efficitur lobortis, elit lacus elementum orci, a bibendum odio nulla id mauris. Sed eu nunc ut dolor fermentum fermentum nec eu nisl."
   },
   {
     "nombre": "Zapatillas Deportivas",
-    "venta": true,
+    "tipo": true,
     "precio": 100,
     "foto": "26_zapatillas-deportivas.jpg",
-    "tags": ["fashion", "lifestyle"]
+    "tags": ["fashion", "lifestyle"],
+    "descripcion": "Vestibulum sed ullamcorper risus. Proin condimentum erat erat, vitae convallis mi vehicula id. Suspendisse sed ultricies metus. Quisque augue nisi, condimentum at sagittis et, dapibus vel dui. Morbi at ante nisl. Nulla sit amet mi metus. Nulla auctor sagittis porttitor. Praesent pellentesque risus est, eget bibendum erat ultricies at. Suspendisse potenti. Nullam eu nisl vel mauris hendrerit elementum ac vel enim. Praesent rhoncus bibendum lectus ac aliquet."
   },
   {
     "nombre": "Bolso Elegante para Portátil",
-    "venta": true,
+    "tipo": true,
     "precio": 50,
     "foto": "27_bolso-portatil.jpg",
-    "tags": ["fashion", "work", "lifestyle"]
+    "tags": ["fashion", "work", "lifestyle"],
+    "descripcion": "Duis nec nunc non velit ultricies auctor. Maecenas auctor, justo nec malesuada efficitur, nisi urna bibendum ipsum, non cursus metus arcu vel arcu. Vivamus condimentum congue massa a facilisis. Sed vel sodales odio, in bibendum nisl. Nunc feugiat, risus vitae bibendum sagittis, lacus justo mattis purus, nec ullamcorper elit ligula vel nisl. Nam ullamcorper felis vel justo cursus, eu laoreet augue scelerisque."
   },
   {
     "nombre": "Mochila para Excursiones",
-    "venta": true,
+    "tipo": true,
     "precio": 40,
     "foto": "28_mochila-excursiones.jpg",
-    "tags": ["outdoors", "lifestyle"]
+    "tags": ["outdoors", "lifestyle"],
+    "descripcion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, libero ac scelerisque facilisis, purus velit facilisis dolor, id gravida quam lectus eu eros. Sed vehicula, odio ac volutpat tristique, nisl ex vestibulum velit, nec posuere dolor metus nec mauris. Fusce efficitur sem non lacus varius, ac dapibus neque tincidunt. Ut eget risus vel velit imperdiet ullamcorper in vel nulla. In hac habitasse platea dictumst."
   },
   {
     "nombre": "Teléfono vintage",
-    "venta": true,
+    "tipo": false,
     "precio": 75,
     "foto": "29_telefono-vintage.jpg",
-    "tags": ["home", "collectibles"]
+    "tags": ["home", "collectibles"],
+    "descripcion": "Cras ullamcorper euismod justo, vel feugiat ligula tincidunt eu. Ut hendrerit augue eu nisi vulputate, a ultricies nunc fermentum. Integer ac risus eu urna sagittis feugiat. Sed vitae elit nec sapien luctus imperdiet. Mauris at erat vel ex interdum congue. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Ut ut libero vel libero cursus tincidunt. Suspendisse et eleifend arcu."
   },
   {
     "nombre": "Gafas de Sol de Diseño",
-    "venta": true,
+    "tipo": true,
     "precio": 60,
     "foto": "30_gafas-de-sol.jpg",
-    "tags": ["fashion", "lifestyle"]
+    "tags": ["fashion", "lifestyle"],
+    "descripcion": "Duis nec nunc non velit ultricies auctor. Maecenas auctor, justo nec malesuada efficitur, nisi urna bibendum ipsum, non cursus metus arcu vel arcu. Vivamus condimentum congue massa a facilisis. Sed vel sodales odio, in bibendum nisl. Nunc feugiat, risus vitae bibendum sagittis, lacus justo mattis purus, nec ullamcorper elit ligula vel nisl. Nam ullamcorper felis vel justo cursus, eu laoreet augue scelerisque."
   },
   {
     "nombre": "Libro ed. coleccionista",
-    "venta": true,
+    "tipo": true,
     "precio": 75,
     "foto": "31_libro-edespecial.jpg",
-    "tags": ["collectibles", "lifestyle"]
+    "tags": ["collectibles", "lifestyle"],
+    "descripcion": "Vestibulum sed ullamcorper risus. Proin condimentum erat erat, vitae convallis mi vehicula id. Suspendisse sed ultricies metus. Quisque augue nisi, condimentum at sagittis et, dapibus vel dui. Morbi at ante nisl. Nulla sit amet mi metus. Nulla auctor sagittis porttitor. Praesent pellentesque risus est, eget bibendum erat ultricies at. Suspendisse potenti. Nullam eu nisl vel mauris hendrerit elementum ac vel enim. Praesent rhoncus bibendum lectus ac aliquet."
   },
   {
     "nombre": "Joyero Vintage",
-    "venta": true,
+    "tipo": true,
     "precio": 40,
     "foto": "32_joyero-vintage.jpg",
-    "tags": ["home", "collectibles"]
+    "tags": ["home", "collectibles"],
+    "descripcion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, libero ac scelerisque facilisis, purus velit facilisis dolor, id gravida quam lectus eu eros. Sed vehicula, odio ac volutpat tristique, nisl ex vestibulum velit, nec posuere dolor metus nec mauris. Fusce efficitur sem non lacus varius, ac dapibus neque tincidunt. Ut eget risus vel velit imperdiet ullamcorper in vel nulla. In hac habitasse platea dictumst."
   },
   {
     "nombre": "Cámara Instantánea",
-    "venta": false,
+    "tipo": false,
     "precio": 80,
     "foto": "33_camara-instant.jpg",
-    "tags": ["electronics", "lifestyle"]
+    "tags": ["electronics", "lifestyle"],
+    "descripcion": "Phasellus vestibulum justo non purus posuere, vel commodo libero volutpat. Integer tincidunt libero vitae diam ullamcorper, ut luctus dui tincidunt. Fusce tristique lectus nec risus efficitur, sit amet lacinia elit luctus. Suspendisse vel sapien eu urna tempor iaculis. Maecenas aliquam, urna ut efficitur lobortis, elit lacus elementum orci, a bibendum odio nulla id mauris. Sed eu nunc ut dolor fermentum fermentum nec eu nisl."
   },
   {
     "nombre": "Videojuego Ed. Especial",
-    "venta": true,
+    "tipo": true,
     "precio": 70,
     "foto": "34_videojuego-especial.jpg",
-    "tags": ["games", "lifestyle"]
+    "tags": ["games", "lifestyle"],
+    "descripcion": "Cras ullamcorper euismod justo, vel feugiat ligula tincidunt eu. Ut hendrerit augue eu nisi vulputate, a ultricies nunc fermentum. Integer ac risus eu urna sagittis feugiat. Sed vitae elit nec sapien luctus imperdiet. Mauris at erat vel ex interdum congue. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Ut ut libero vel libero cursus tincidunt. Suspendisse et eleifend arcu."
   },
   {
     "nombre": "Set de Cuchillos alta calidad",
-    "venta": true,
+    "tipo": true,
     "precio": 220,
     "foto": "35_cuchillos.jpg",
-    "tags": ["home", "lifestyle"]
+    "tags": ["home", "lifestyle"],
+    "descripcion": "Duis nec nunc non velit ultricies auctor. Maecenas auctor, justo nec malesuada efficitur, nisi urna bibendum ipsum, non cursus metus arcu vel arcu. Vivamus condimentum congue massa a facilisis. Sed vel sodales odio, in bibendum nisl. Nunc feugiat, risus vitae bibendum sagittis, lacus justo mattis purus, nec ullamcorper elit ligula vel nisl. Nam ullamcorper felis vel justo cursus, eu laoreet augue scelerisque."
   },
   {
     "nombre": "Altavoz Bluetooth",
-    "venta": false,
+    "tipo": false,
     "precio": 80,
     "foto": "36_altavoz.jpg",
-    "tags": ["electronics", "lifestyle"]
+    "tags": ["electronics", "lifestyle"],
+    "descripcion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, libero ac scelerisque facilisis, purus velit facilisis dolor, id gravida quam lectus eu eros. Sed vehicula, odio ac volutpat tristique, nisl ex vestibulum velit, nec posuere dolor metus nec mauris. Fusce efficitur sem non lacus varius, ac dapibus neque tincidunt. Ut eget risus vel velit imperdiet ullamcorper in vel nulla. In hac habitasse platea dictumst."
   },
   {
     "nombre": "Set de cuencos para ramen",
-    "venta": true,
+    "tipo": true,
     "precio": 50,
     "foto": "37_cuencos-ramen.jpg",
-    "tags": ["home", "lifestyle"]
+    "tags": ["home", "lifestyle"],
+    "descripcion": "Vestibulum sed ullamcorper risus. Proin condimentum erat erat, vitae convallis mi vehicula id. Suspendisse sed ultricies metus. Quisque augue nisi, condimentum at sagittis et, dapibus vel dui. Morbi at ante nisl. Nulla sit amet mi metus. Nulla auctor sagittis porttitor. Praesent pellentesque risus est, eget bibendum erat ultricies at. Suspendisse potenti. Nullam eu nisl vel mauris hendrerit elementum ac vel enim. Praesent rhoncus bibendum lectus ac aliquet."
   },
   {
     "nombre": "Máquina escribir vintage",
-    "venta": true,
+    "tipo": true,
     "precio": 80,
     "foto": "38_maquina-escribir.jpg",
-    "tags": ["home", "lifestyle", "collectibles"]
+    "tags": ["home", "lifestyle", "collectibles"],
+    "descripcion": "Cras ullamcorper euismod justo, vel feugiat ligula tincidunt eu. Ut hendrerit augue eu nisi vulputate, a ultricies nunc fermentum. Integer ac risus eu urna sagittis feugiat. Sed vitae elit nec sapien luctus imperdiet. Mauris at erat vel ex interdum congue. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Ut ut libero vel libero cursus tincidunt. Suspendisse et eleifend arcu."
   },
   {
     "nombre": "Volkswagen beetle",
-    "venta": true,
+    "tipo": true,
     "precio": 12700,
     "foto": "39_beetle.jpg",
-    "tags": ["motor", "collectibles", "lifestyle"]
+    "tags": ["motor", "collectibles", "lifestyle"],
+    "descripcion": "Phasellus vestibulum justo non purus posuere, vel commodo libero volutpat. Integer tincidunt libero vitae diam ullamcorper, ut luctus dui tincidunt. Fusce tristique lectus nec risus efficitur, sit amet lacinia elit luctus. Suspendisse vel sapien eu urna tempor iaculis. Maecenas aliquam, urna ut efficitur lobortis, elit lacus elementum orci, a bibendum odio nulla id mauris. Sed eu nunc ut dolor fermentum fermentum nec eu nisl."
   },
   {
     "nombre": "Moto Harley Davidson",
-    "venta": true,
-    "precio": 14800,
+    "tipo": false,
+    "precio": 14500,
     "foto": "40_harley.jpg",
-    "tags": ["motor", "lifestyle"]
+    "tags": ["motor", "lifestyle"],
+    "descripcion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, libero ac scelerisque facilisis, purus velit facilisis dolor, id gravida quam lectus eu eros. Sed vehicula, odio ac volutpat tristique, nisl ex vestibulum velit, nec posuere dolor metus nec mauris. Fusce efficitur sem non lacus varius, ac dapibus neque tincidunt. Ut eget risus vel velit imperdiet ullamcorper in vel nulla. In hac habitasse platea dictumst."
   }
 ]

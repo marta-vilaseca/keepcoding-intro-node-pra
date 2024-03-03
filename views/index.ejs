@@ -18,9 +18,11 @@
           <span class="producto__precio"><%= anuncio.precio %>€</span>
           <div class="producto__info">
             <span class="categoria"><%= anuncio.venta ? "Se vende" : "Se busca" %></span>
-            <h3 title="<%= anuncio.nombre %>"><%= anuncio.nombre %></h3>
+            <a href="<%= '/' + anuncio._id %>" title="<%= anuncio.nombre %>"><h3><%= anuncio.nombre %></h3></a>
           </div>
-          <div class="producto__foto"><img src="<%= '/images/' + anuncio.foto %>" alt="Imagen de <%= anuncio.nombre %>" /></div>
+          <div class="producto__foto">
+            <a href="<%= '/' + anuncio._id %>"><img src="<%= '/images/' + anuncio.foto %>" alt="Imagen de <%= anuncio.nombre %>" /></a>
+          </div>
           <ul class="tags">
             <% anuncio.tags.forEach(tag => { %>
             <li class="tag"><a href="?tags=<%= tag %>"><%= tag %></a></li>

@@ -6,7 +6,7 @@ const allowedFormats = ["jpg", "jpeg", "png", "gif", "webp"];
 // definir el esquema de los anuncios
 const anuncioSchema = mongoose.Schema({
   nombre: { type: String, required: true, index: true },
-  venta: { type: Boolean, required: true, index: true },
+  tipo: { type: Boolean, required: true, index: true },
   precio: { type: Number, required: true, index: true },
   foto: {
     type: String,
@@ -30,6 +30,11 @@ const anuncioSchema = mongoose.Schema({
       message: "Tag inválido. Tags permitidos: collectibles, electronics, fashion, games, home, lifestyle, mobile, motor, outdoors, work",
     },
   },
+  descripcion: {
+    type: String,
+    default:
+      "Vestibulum sed ullamcorper risus. Proin condimentum erat erat, vitae convallis mi vehicula id. Suspendisse sed ultricies metus. Quisque augue nisi, condimentum at sagittis et, dapibus vel dui. Morbi at ante nisl. Nulla sit amet mi metus. Nulla auctor sagittis porttitor. Praesent pellentesque risus est, eget bibendum erat ultricies at. Suspendisse potenti. Nullam eu nisl vel mauris hendrerit elementum ac vel enim. Praesent rhoncus bibendum lectus ac aliquet.",
+  },
 });
 
 // comprobamos que si no se ha proporcionado foto o el formato de la misma es erróneo, utilizamos una imagen por defecto
@@ -41,13 +46,12 @@ anuncioSchema.pre("save", function (next) {
 });
 
 // método listar
-anuncioSchema.statics.listar = function (filtro, skip, limit, sort, fields) {
+anuncioSchema.statics.listar = function (filtro, skip, limit, sort) {
   const query = Anuncio.find(filtro);
 
   query.skip(skip);
   query.limit(limit);
   query.sort(sort);
-  query.select(fields);
 
   return query.exec();
 };
