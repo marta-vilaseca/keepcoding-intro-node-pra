@@ -32,7 +32,7 @@ cd nodepop
 npm install
 ```
 
-✅ Nos aseguramos que tenemos el **servidor de MongoDB** instalado y ejecutándose en nuestro sistema
+✅ Nos aseguramos que tenemos el **servidor de MongoDB** instalado y ejecutándose en nuestro sistema  
 ✅ Cargamos los **anuncios por defecto** con que vienen incluídos en el archivo `initDB.js` que se proporciona en la carpeta del proyecto.
 
 > [!CAUTION]  
@@ -105,34 +105,32 @@ http://localhost:3000/?tags=:tag
 
 ➜ Ejemplo: `http://localhost:3000/?tags=mobile` mostrará todos los anuncios bajo el tag `mobile`
 
-:small_blue_diamond: Para obtener listado de anuncios **sólo de artículos en venta** o **sólo de artículos en búsqueda**:
+:small_blue_diamond: Para obtener listado de anuncios **en función de su status de venta**:
 
-```
-http://localhost:3000/?tipo=venta
-http://localhost:3000/?tipo=busqueda
-```
+➜ Ejemplo: `http://localhost:3000/?tipo=venta` muestra los anuncios de productos en venta  
+➜ Ejemplo: `http://localhost:3000/?tipo=busqueda` muestra los anuncios de productos que alguien esté buscando
 
 :small_blue_diamond: Para obtener **listado de anuncios filtrado por (rango de) precio**:
 
-- Productos cuyo precio sea `n` o más: `/api/anuncios?precio=:n-`
+- Productos cuyo precio sea `n` o más: `/?precio=:n-`  
   ➜ Ejemplo: `http://localhost:3000/?precio=50-`
-- Productos cuyo precio sea menor a `n`: `/api/anuncios?precio=-:n`
+- Productos cuyo precio sea menor a `n`: `/?precio=-:n`  
   ➜ Ejemplo: `http://localhost:3000/?precio=-100`
-- Productos cuyo precio esté entre `n` y `n1` `/api/anuncios?precio=:n-:n1`
+- Productos cuyo precio esté entre `n` y `n1` `/?precio=:n-:n1`  
   ➜ Ejemplo: `http://localhost:3000/?precio=50-100`
-- Productos cuyo precio sea _exactamente_ `n` `/api/anuncios?precio=n`
+- Productos cuyo precio sea _exactamente_ `n` `/?precio=:n`  
   ➜ Ejemplo: `http://localhost:3000/?precio=150`
 
 :small_blue_diamond: Para aplicar **paginación** podemos utilizar:
 
-- `skip` para saltar hasta un elemento determinado
+- `skip` para saltar hasta un elemento determinado  
   ➜ Ejemplo: `http://localhost:3000/?skip=2` empezará la lista desde el elemento número 3
-- `limit` para determinar cuantos elementos queremos ver de una vez (por página)
+- `limit` para determinar cuantos elementos queremos ver de una vez (por página)  
   ➜ Ejemplo: `http://localhost:3000/?limit=5` nos mostrará solo 5 elementos de una vez (por página)
 
 :small\*blue_diamond: Para **ordenar** los resultados de acuerdo a un campo determinado. Podemos incluir **más de un campo** separándolos por espacios, o añadir un **'-'** como modificador para indicar orden descendiente.
 
-➜ Ejemplo: `http://localhost:3000/?sort=-precio` ordenamos por precio DESC
+➜ Ejemplo: `http://localhost:3000/?sort=-precio` ordenamos por precio DESC  
 ➜ Ejemplo: `http://localhost:3000/?sort=-precio%20nombre` ordenamos por precio DESC y luego nombre ASC
 
 #### :small_blue_diamond: **Ejemplo encadenando varios parámetros:**
@@ -194,30 +192,30 @@ A través del **endpoint** `/api/anuncios` _(ruta completa `http://localhost:300
 
 :small_orange_diamond: Para obtener listado de anuncios **en función de su status de venta**:
 
-➜ Ejemplo: `http://localhost:3000/api/anuncios?tipo=venta` muestra los anuncios de productos en venta
-➜ Ejemplo: `http://localhost:3000/api/anuncios?tipo=busqueda` muestra los anuncios de productos que alguien esté buscando encontrar
+➜ Ejemplo: `http://localhost:3000/api/anuncios?tipo=venta` muestra los anuncios de productos en venta  
+➜ Ejemplo: `http://localhost:3000/api/anuncios?tipo=busqueda` muestra los anuncios de productos que alguien esté buscando
 
 :small_orange_diamond: Para obtener **listado de anuncios filtrado por (rango de) precio**:
 
-- Productos cuyo precio sea `n` o más: `/api/anuncios?precio=:n-`
+- Productos cuyo precio sea `n` o más: `/api/anuncios?precio=:n-`  
   ➜ Ejemplo: `http://localhost:3000/api/anuncios?precio=50-`
-- Productos cuyo precio sea menor a `n`: `/api/anuncios?precio=-:n`
+- Productos cuyo precio sea menor a `n`: `/api/anuncios?precio=-:n`  
   ➜ Ejemplo: `http://localhost:3000/api/anuncios?precio=-100`
-- Productos cuyo precio esté entre `n` y `n1` `/api/anuncios?precio=:n-:n1`
+- Productos cuyo precio esté entre `n` y `n1` `/api/anuncios?precio=:n-:n1`  
   ➜ Ejemplo: `http://localhost:3000/api/anuncios?precio=50-100`
-- Productos cuyo precio sea _exactamente_ `n` `/api/anuncios?precio=n`
+- Productos cuyo precio sea _exactamente_ `n` `/api/anuncios?precio=:n`  
   ➜ Ejemplo: `http://localhost:3000/api/anuncios?precio=150`
 
 :small_orange_diamond: Para aplicar **paginación** podemos utilizar:
 
-- `skip` para saltar hasta un elemento determinado
+- `skip` para saltar hasta un elemento determinado  
   ➜ Ejemplo: `http://localhost:3000/api/anuncios?skip=2` empezará la lista desde el elemento número 3
-- `limit` para determinar cuantos elementos queremos ver de una vez (por página)
+- `limit` para determinar cuantos elementos queremos ver de una vez (por página)  
   ➜ Ejemplo: `http://localhost:3000/api/anuncios?limit=5` nos mostrará solo 5 elementos de una vez (por página)
 
 :small*orange_diamond: Para **ordenar** los resultados de acuerdo a un campo determinado. Podemos incluir **más de un campo** separándolos por espacios, o añadir un *'-'\_ como modificador para indicar orden descendiente.
 
-➜ Ejemplo: `http://localhost:3000/api/anuncios?sort=-precio` ordenamos por precio DESC
+➜ Ejemplo: `http://localhost:3000/api/anuncios?sort=-precio` ordenamos por precio DESC  
 ➜ Ejemplo: `http://localhost:3000/api/anuncios?sort=-precio%20nombre` ordenamos por precio DESC y luego nombre ASC
 
 #### :small_orange_diamond: **Ejemplo encadenando varios parámetros:**
@@ -267,8 +265,9 @@ Desde Postman o equivalente, crearemos una **PATCH request** apuntando a `http:/
 A través del apartado **Body > x-www-form-urlencoded** podemos modificar el anuncio de forma similar a como haríamos para crear uno nuevo, **pero solo incluyendo los campos cuyo contenido vamos a cambiar.**
 
 Por ejemplo en caso de querer modificar el **precio** de un anuncio:
-| Key | Value |
-| ---------- | ---------- |
+
+| Key        | Value                                 |
+| ---------- | ------------------------------------- |
 | **precio** | Nuevo precio, en formato _[Numérico]_ |
 
 Al enviar y si todo valida correctamente, recibiremos una respuesta en este formato (con el anuncio entero actualizado, en este caso con nuevo precio de `200`):
@@ -294,7 +293,7 @@ Desde Postman o equivalente, crearemos una **DELETE request** apuntando a `http:
 No tenemos que introducir más parámetros.
 
 > [!CAUTION]  
-> No nos pedirá confirmación de ningún tipo, si ejecutamos la petición y la id proporcionada es correcta borrará el anuncio automáticamente
+> No nos pedirá confirmación de ningún tipo, al enviar la petición y si la id proporcionada es correcta **se borrará el anuncio automáticamente**
 
 Si no ha habido ningún error, recibiremos esta respuesta:
 
@@ -344,8 +343,8 @@ Además del desarrollo de la API, es necesario que el site tenga una página fro
 - **Nombre** del artículo/anuncio
 - Si el artículo está en **Venta** o bien el anuncio es porque alguien está buscando ese producto
 - **Precio** del artículo (de venta o de cuánto está dispuesto a pagar el anunciante, en caso de estarlo buscando)
-- **Foto** del artículo
-- **Tags**, conteniendo siempre uno o varios de estos cuatro: `work`, `lifestyle`, `motor` y `mobile`
+- **Foto** del artículo (una sola por anuncio)
+- **Tags**, conteniendo siempre uno o varios de [los tags válidos](#tags-válidos)
 
 #### Operaciones que debe realizar el API:
 
