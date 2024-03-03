@@ -281,6 +281,7 @@ Al enviar y si todo valida correctamente, recibiremos una respuesta en este form
     "precio": 200,
     "foto": "no-photo.png",
     "tags": ["home", "lifestyle"],
+    "descripcion": "Prueba de descripción de producto. Puede ser tan larga como necesitemos.",
     "__v": 0
   }
 }

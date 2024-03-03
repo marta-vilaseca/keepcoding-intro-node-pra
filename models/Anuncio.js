@@ -1,7 +1,6 @@
 const mongoose = require("mongoose");
 
-const validTags = ["collectibles", "electronics", "fashion", "games", "home", "lifestyle", "mobile", "motor", "outdoors", "work"];
-const allowedFormats = ["jpg", "jpeg", "png", "gif", "webp"];
+const { validTags, allowedFormats } = require("../lib/variables");
 
 // definir el esquema de los anuncios
 const anuncioSchema = mongoose.Schema({
