@@ -7,7 +7,7 @@
 Desarrollar el API que se ejecutará en el servidor de un servicio de venta de artículos de segunda mano llamado **Nodepop**.
 
 - [Instalación e inicialización](#instalación-e-inicialización)
-- [Guía de uso: Website](#🔷-website)
+- [Guía de uso: Website](#website)
 - [Guía de uso: API](#api)
 - [Anexo: listado de tags válidos](#tags-válidos)
 - [Anexo: formatos de imagen permitidos](#formatos-de-imagen-válidos)
@@ -37,6 +37,7 @@ npm install
 
 > [!CAUTION]  
 > Ejecutar y confirmar este comando provocará el borrado de todo el contenido actual de la base de datos
+
 > [!NOTE]  
 > El comando solo se ejecutará con éxito si respondemos 'si' a la pregunta que se nos formula
 
@@ -307,7 +308,7 @@ Si no ha habido ningún error, recibiremos esta respuesta:
 
 ## Anexo
 
-### :pencil2: Tags válidos
+### Tags válidos
 
 - collectibles
 - electronics
@@ -320,7 +321,7 @@ Si no ha habido ningún error, recibiremos esta respuesta:
 - outdoors
 - work
 
-### 📷 Formatos de imagen válidos
+### Formatos de imagen válidos
 
 > [!NOTE]  
 > La funcionalidad de poder subir imágenes aún no está implementada, pero para hacer pruebas se ha facilitado la posibilidad de, al añadir un anuncio nuevo, poder poner en el apartado foto un string en formato `nombre.ext`. Estas son las extensiones/formatos permitidos con este sistema
@@ -330,7 +331,7 @@ Si no ha habido ningún error, recibiremos esta respuesta:
 - `gif`
 - `webp`
 
-### 👩🏻‍💻 Requisitos
+### Requisitos
 
 Según especificado en el enunciado o _briefing_, el servicio mantiene anuncios de compra o venta de artículos y permite tanto buscar como poner filtros por varios criterios, por tanto la API a desarrollar deberá proveer los métodos necesarios para esto.
 
