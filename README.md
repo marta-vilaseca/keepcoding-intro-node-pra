@@ -13,6 +13,8 @@ Desarrollar el API que se ejecutará en el servidor de un servicio de venta de a
 - [Anexo: formatos de imagen permitidos](#formatos-de-imagen-válidos)
 - [Anexo: requisitos práctica según enunciado](#requisitos)
 
+![Screenshot](/public/images/nodepop-screenshot.jpg)
+
 ---
 
 # 📄 Documentación App
