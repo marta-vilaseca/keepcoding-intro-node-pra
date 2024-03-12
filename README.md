@@ -217,7 +217,7 @@ A través del **endpoint** `/api/anuncios` _(ruta completa `http://localhost:300
 - `limit` para determinar cuantos elementos queremos ver de una vez (por página)  
   ➜ Ejemplo: `http://localhost:3000/api/anuncios?limit=5` nos mostrará solo 5 elementos de una vez (por página)
 
-:small*orange_diamond: Para **ordenar** los resultados de acuerdo a un campo determinado. Podemos incluir **más de un campo** separándolos por espacios, o añadir un *'-'\_ como modificador para indicar orden descendiente.
+:small_orange_diamond: Para **ordenar** los resultados de acuerdo a un campo determinado. Podemos incluir **más de un campo** separándolos por espacios, o añadir un *'-'\_ como modificador para indicar orden descendiente.
 
 ➜ Ejemplo: `http://localhost:3000/api/anuncios?sort=-precio` ordenamos por precio DESC  
 ➜ Ejemplo: `http://localhost:3000/api/anuncios?sort=-precio%20nombre` ordenamos por precio DESC y luego nombre ASC
